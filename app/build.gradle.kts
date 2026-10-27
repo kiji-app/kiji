@@ -39,16 +39,16 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "me.ash.reader"
+        applicationId = "app.kiji"
         minSdk = 26
         targetSdk = 34
-        versionCode = 47
-        versionName = "0.16.2"
+        versionCode = 1
+        versionName = "0.1.0"
 
         buildConfigField(
             "String",
             "USER_AGENT_STRING",
-            "\"ReadYou/${versionName}(${versionCode})\"",
+            "\"Kiji/${versionName}(${versionCode})\"",
         )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -95,7 +95,7 @@ android {
     applicationVariants.all {
         outputs.all {
             (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
-                "ReadYou-${defaultConfig.versionName}-${gitCommitHash}.apk"
+                "Kiji-${defaultConfig.versionName}-${gitCommitHash}.apk"
         }
     }
     kotlinOptions {

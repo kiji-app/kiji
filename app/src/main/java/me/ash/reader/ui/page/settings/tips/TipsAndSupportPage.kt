@@ -8,6 +8,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -100,7 +102,6 @@ fun TipsAndSupportPage(
     val view = LocalView.current
     val scope = rememberCoroutineScope()
     var currentVersion by remember { mutableStateOf("") }
-    var showSponsorDialog by remember { mutableStateOf(false) }
 
     val morphProgress = remember { Animatable(0f) }
 
@@ -237,6 +238,19 @@ fun TipsAndSupportPage(
                                 style = MaterialTheme.typography.displaySmall
                             )
                         }
+                        Text(
+                            modifier = Modifier
+                                .padding(top = 8.dp)
+                                .clickable {
+                                    context.openURL(
+                                        context.getString(R.string.read_you_link),
+                                        OpenLinkPreference.AutoPreferCustomTabs
+                                    )
+                                },
+                            text = stringResource(R.string.based_on_read_you),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
                 }
                 item {
@@ -246,17 +260,6 @@ fun TipsAndSupportPage(
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        // Sponsor
-                        RoundIconButton(
-                            RoundIconButtonType.Sponsor(
-                                backgroundColor = MaterialTheme.colorScheme.tertiaryContainer alwaysLight true,
-                            ) {
-                                view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
-                                view.playSoundEffect(SoundEffectConstants.CLICK)
-                                showSponsorDialog = true
-                            })
-                        Spacer(modifier = Modifier.width(16.dp))
-
                         // GitHub
                         RoundIconButton(
                             RoundIconButtonType.GitHub(
@@ -266,20 +269,6 @@ fun TipsAndSupportPage(
                                 view.playSoundEffect(SoundEffectConstants.CLICK)
                                 context.openURL(
                                     context.getString(R.string.github_link),
-                                    OpenLinkPreference.AutoPreferCustomTabs
-                                )
-                            })
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        // Telegram
-                        RoundIconButton(
-                            RoundIconButtonType.Telegram(
-                                backgroundColor = MaterialTheme.colorScheme.primaryContainer alwaysLight true,
-                            ) {
-                                view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
-                                view.playSoundEffect(SoundEffectConstants.CLICK)
-                                context.openURL(
-                                    context.getString(R.string.telegram_link),
                                     OpenLinkPreference.AutoPreferCustomTabs
                                 )
                             })
@@ -305,9 +294,6 @@ fun TipsAndSupportPage(
     )
 
     UpdateDialog()
-    if (showSponsorDialog) {
-        SponsorDialog { showSponsorDialog = false }
-    }
 }
 
 @Immutable
