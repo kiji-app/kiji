@@ -3,7 +3,6 @@ import java.util.Properties
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeFeatureFlag
 
 plugins {
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.aboutlibraries)
@@ -14,15 +13,6 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
 }
 
-fun fetchGitCommitHash(): String {
-    val process =
-        ProcessBuilder("git", "rev-parse", "--verify", "--short", "HEAD")
-            .redirectErrorStream(true)
-            .start()
-    return process.inputStream.bufferedReader().use { it.readText().trim() }
-}
-
-val gitCommitHash = fetchGitCommitHash()
 val keyProps = Properties()
 val releaseKeyPropsFile: File = rootProject.file("signature/keystore_release.properties")
 val debugKeyPropsFile: File = rootProject.file("signature/keystore.properties")
@@ -92,16 +82,6 @@ android {
         }
         all { signingConfig = signingConfigs.getByName("release") }
     }
-    applicationVariants.all {
-        outputs.all {
-            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
-                "Kiji-${defaultConfig.versionName}-${gitCommitHash}.apk"
-        }
-    }
-    kotlinOptions {
-        freeCompilerArgs = freeCompilerArgs + "-opt-in=kotlin.RequiresOptIn"
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -114,6 +94,13 @@ android {
     androidResources { generateLocaleConfig = true }
     composeCompiler { featureFlags = setOf(ComposeFeatureFlag.PausableComposition) }
     namespace = "me.ash.reader"
+}
+
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.add("-opt-in=kotlin.RequiresOptIn")
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+    }
 }
 
 aboutLibraries { excludeFields = arrayOf("generated") }
