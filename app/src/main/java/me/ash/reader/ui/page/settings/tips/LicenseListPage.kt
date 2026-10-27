@@ -48,7 +48,7 @@ fun LicenseListPage(
                 tint = MaterialTheme.colorScheme.onSurface
             ) {
                 context.openURL(
-                    url = context.getString(R.string.github_link) + "/blob/main/LICENSE",
+                    url = context.getString(R.string.github_link) + "/blob/master/LICENSE",
                     openLink = OpenLinkPreference.AutoPreferCustomTabs,
                 )
             }
