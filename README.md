@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="160" height="160" src="fastlane/metadata/android/en-US/images/icon.png" alt="Kiji icon" />
+    <img width="160" height="160" src="docs/icon.svg" alt="Kiji icon" />
     <h1>Kiji</h1>
     <p>An Android RSS reader and news aggregator focused on clean, readable articles.</p>
 </div>
