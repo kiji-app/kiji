@@ -479,13 +479,11 @@ interface ArticleDao {
         """
         SELECT * FROM article 
         WHERE accountId = :accountId
-        ORDER BY
-            CASE WHEN :sortAscending = 1 THEN date END ASC,
-            CASE WHEN :sortAscending = 0 THEN date END DESC
+        ORDER BY date DESC
         """
     )
     fun queryArticleWithFeedWhenIsAll(
-        accountId: Int, sortAscending: Boolean = false
+        accountId: Int
     ): PagingSource<Int, ArticleWithFeed>
 
     @Transaction
@@ -494,13 +492,11 @@ interface ArticleDao {
         SELECT * FROM article
         WHERE isStarred = :isStarred 
         AND accountId = :accountId
-        ORDER BY
-            CASE WHEN :sortAscending = 1 THEN date END ASC,
-            CASE WHEN :sortAscending = 0 THEN date END DESC
+        ORDER BY date DESC
         """
     )
     fun queryArticleWithFeedWhenIsStarred(
-        accountId: Int, isStarred: Boolean, sortAscending: Boolean = false
+        accountId: Int, isStarred: Boolean
     ): PagingSource<Int, ArticleWithFeed>
 
     @Transaction
@@ -509,13 +505,24 @@ interface ArticleDao {
         SELECT * FROM article 
         WHERE isUnread = :isUnread 
         AND accountId = :accountId
-        ORDER BY
-            CASE WHEN :sortAscending = 1 THEN date END ASC,
-            CASE WHEN :sortAscending = 0 THEN date END DESC
+        ORDER BY date DESC
         """
     )
     fun queryArticleWithFeedWhenIsUnread(
-        accountId: Int, isUnread: Boolean, sortAscending: Boolean = false
+        accountId: Int, isUnread: Boolean
+    ): PagingSource<Int, ArticleWithFeed>
+
+    @Transaction
+    @Query(
+        """
+        SELECT * FROM article 
+        WHERE isUnread = :isUnread 
+        AND accountId = :accountId
+        ORDER BY date ASC
+        """
+    )
+    fun queryArticleWithFeedWhenIsUnreadAscending(
+        accountId: Int, isUnread: Boolean
     ): PagingSource<Int, ArticleWithFeed>
 
     @Transaction

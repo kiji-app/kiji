@@ -15,7 +15,15 @@ import java.util.*
         childColumns = ["feedId"],
         onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE
-    )]
+    )],
+    indices = [
+        Index(value = ["accountId", "feedId"]),
+        Index(value = ["accountId", "isUnread", "feedId"]),
+        Index(value = ["accountId", "isStarred", "feedId"]),
+        Index(value = ["accountId", "date"]),
+        Index(value = ["accountId", "isUnread", "date"]),
+        Index(value = ["accountId", "isStarred", "date"]),
+    ]
 )
 data class Article(
     @PrimaryKey

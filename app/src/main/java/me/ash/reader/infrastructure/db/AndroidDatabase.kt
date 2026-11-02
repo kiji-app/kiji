@@ -20,7 +20,7 @@ import java.util.*
 
 @Database(
     entities = [Account::class, Feed::class, Article::class, Group::class, ArchivedArticle::class],
-    version = 7,
+    version = 8,
     autoMigrations = [
         AutoMigration(from = 5, to = 6),
         AutoMigration(from = 5, to = 7),
@@ -80,6 +80,7 @@ val allMigrations = arrayOf(
     MIGRATION_2_3,
     MIGRATION_3_4,
     MIGRATION_4_5,
+    MIGRATION_7_8,
 )
 
 @Suppress("ClassName")
@@ -157,5 +158,19 @@ object MIGRATION_4_5 : Migration(4, 5) {
             ALTER TABLE account ADD COLUMN lastArticleId TEXT DEFAULT NULL
             """.trimIndent()
         )
+    }
+}
+
+// Written by hand because the generated AutoMigration copies the whole article table just to add indices.
+@Suppress("ClassName")
+object MIGRATION_7_8 : Migration(7, 8) {
+
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_feedId` ON `article` (`accountId`, `feedId`)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_isUnread_feedId` ON `article` (`accountId`, `isUnread`, `feedId`)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_isStarred_feedId` ON `article` (`accountId`, `isStarred`, `feedId`)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_date` ON `article` (`accountId`, `date`)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_isUnread_date` ON `article` (`accountId`, `isUnread`, `date`)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS `index_article_accountId_isStarred_date` ON `article` (`accountId`, `isStarred`, `date`)")
     }
 }

@@ -270,12 +270,10 @@ abstract class AbstractRssRepository(
             else ->
                 when {
                     isStarred -> articleDao.queryArticleWithFeedWhenIsStarred(accountId, true)
-                    isUnread ->
-                        articleDao.queryArticleWithFeedWhenIsUnread(
-                            accountId,
-                            true,
-                            sortAscending = sortAscending,
-                        )
+                    isUnread && sortAscending ->
+                        articleDao.queryArticleWithFeedWhenIsUnreadAscending(accountId, true)
+
+                    isUnread -> articleDao.queryArticleWithFeedWhenIsUnread(accountId, true)
 
                     else -> articleDao.queryArticleWithFeedWhenIsAll(accountId)
                 }
