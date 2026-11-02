@@ -61,8 +61,6 @@
     <string name="languages">Jeziki</string>
     <string name="use_device_languages">Uporabi jezik naprave</string>
     <string name="browse_tos_tips">Prebrskajte <i><u>Pogoje storitve in Pravilnik o zasebnosti</u></i></string>
-    <string name="wallpaper_colors">Barve ozadja</string>
-    <string name="no_palettes">Brez palet</string>
     <string name="use_device_theme">Uporabi temo naprave</string>
     <string name="other">Drugo</string>
     <string name="amoled_dark_theme">Črna temna tema</string>
@@ -79,7 +77,6 @@
     <string name="download_failure">Posodobitev ni bilo mogoče prenesti</string>
     <string name="check_failure">Posodobitev ni bilo mogoče preveriti</string>
     <string name="rate_limit">Število zahtevkov je omejeno</string>
-    <string name="help">Pomoč</string>
     <string name="on_start">Ob zagonu</string>
     <string name="initial_filter">Začetni filter</string>
     <string name="horizontal_padding">Vodoravno oblazinjenje</string>
@@ -144,10 +141,8 @@
     <string name="agree">Strinjam se</string>
     <string name="tos_tips">Če želite nadaljevati, preberite Pogoje storitve in Pravilnik o zasebnosti programske opreme Kiji ter se z njimi strinjajte.</string>
     <string name="terms_of_service">Pogoji storitve</string>
-    <string name="basic_colors">Osnovne barve</string>
     <string name="primary_color_hint">Kot #666666 ali 666666</string>
     <string name="appearance">Videz</string>
-    <string name="only_android_8.1_plus">Samo za Android 8.1+</string>
     <string name="primary_color">Primarna barva</string>
     <string name="style">Slog</string>
     <string name="dark_theme">Temna tema</string>
@@ -174,7 +169,6 @@
     <string name="get_new_updates_desc">Na voljo je nova različica %1$s</string>
     <string name="accounts_desc">Lokalni, FreshRSS</string>
     <string name="interaction">Interakcija</string>
-    <string name="tips_and_support_desc">O programski opremi, odprtokodne licence</string>
     <string name="color_and_style">Barva in slog</string>
     <string name="color_and_style_desc">Tema, barvni slog, velikost pisave</string>
     <string name="tips_and_support">Nasveti in podpora</string>

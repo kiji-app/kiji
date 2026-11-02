@@ -7,6 +7,8 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -19,12 +21,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.lerp
 import kotlin.math.absoluteValue
+import me.ash.reader.domain.model.general.Filter
 
 @OptIn(ExperimentalFoundationApi::class)
 fun Modifier.pagerAnimate(pagerState: PagerState, page: Int): Modifier {
@@ -42,6 +47,28 @@ fun Modifier.pagerAnimate(pagerState: PagerState, page: Int): Modifier {
         ).value
     }
 }
+
+// Only horizontal drags that no child consumed count, so rows with their own swipe actions keep them.
+fun Modifier.swipeToChangeFilter(filter: Filter, onChange: (Filter) -> Unit): Modifier =
+    pointerInput(filter) {
+        val threshold = 72.dp.toPx()
+        awaitEachGesture {
+            awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Final)
+            var dx = 0f
+            var dy = 0f
+            do {
+                val event = awaitPointerEvent(PointerEventPass.Final)
+                event.changes.forEach {
+                    val delta = it.positionChange()
+                    dy += delta.y
+                    if (!it.isConsumed) dx += delta.x
+                }
+            } while (event.changes.any { it.pressed })
+            if (dx.absoluteValue > threshold && dx.absoluteValue > dy.absoluteValue * 2) {
+                Filter.values.getOrNull(filter.index + if (dx < 0) 1 else -1)?.let(onChange)
+            }
+        }
+    }
 
 fun Modifier.roundClick(enabled: Boolean = true, onClick: () -> Unit = {}) = this
     .clip(RoundedCornerShape(8.dp))

@@ -67,8 +67,6 @@
     <string name="agree">Concordar</string>
     <string name="reading_fonts">Tipos de letra de leitura</string>
     <string name="skip_this_version">Ignorar esta versão</string>
-    <string name="wallpaper_colors">Cores do fundo</string>
-    <string name="basic_colors">Cores básicas</string>
     <string name="primary_color">Cor primária</string>
     <string name="check_failure">Não foi possível verificar atualizações</string>
     <string name="preview_article_title">A novela \"Lorde dos Mistérios\" chega finalmente ao fim</string>
@@ -112,15 +110,12 @@
     <string name="use_device_languages">Utilizar o idioma do sistema</string>
     <string name="tips_and_support">Dicas e apoio</string>
     <string name="interaction_desc">Página de arranque, gestos</string>
-    <string name="tips_and_support_desc">Sobre, patrocinador, licenças de código aberto</string>
     <string name="welcome">Bem-vindo(a)</string>
     <string name="tos_tips">Por favor, leia e concorde com os termos de serviço e a política de privacidade Kiji para continuar.</string>
     <string name="browse_tos_tips">Explore os <i><u>termos de serviço e a política de privacidade</u></i></string>
     <string name="terms_of_service">Termos de Serviço</string>
     <string name="article_desc">Descrições dos artigos</string>
     <string name="article_images">Imagens</string>
-    <string name="no_palettes">Sem paletas</string>
-    <string name="only_android_8.1_plus">Android 8.1+ apenas</string>
     <string name="primary_color_hint">Como #666666 ou 666666</string>
     <string name="appearance">Aparência</string>
     <string name="style">Estilo</string>
@@ -143,7 +138,6 @@
     <string name="is_latest_version">Esta é a versão mais recente da aplicação</string>
     <string name="download_failure">Não foi possível descarregar atualizações</string>
     <string name="rate_limit">O pedido foi limitado</string>
-    <string name="help">Ajuda</string>
     <string name="on_start">Ao iniciar</string>
     <string name="initial_page">Página inicial</string>
     <string name="initial_filter">Filtro predefinido</string>

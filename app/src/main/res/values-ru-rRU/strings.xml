@@ -59,14 +59,11 @@
     <string name="welcome">Добро пожаловать</string>
     <string name="terms_of_service">Условия использования</string>
     <string name="agree">Согласен</string>
-    <string name="only_android_8.1_plus">Только Android 8.1+</string>
-    <string name="basic_colors">Основные цвета</string>
     <string name="change_log">Список изменений</string>
     <string name="update">Обновить</string>
     <string name="skip_this_version">Пропустить эту версию</string>
     <string name="checking_updates">Поиск обновлений…</string>
     <string name="is_latest_version">Это последняя версия приложения</string>
-    <string name="help">Помощь</string>
     <string name="preview_feed_name">Reddit</string>
     <string name="on">Вкл</string>
     <string name="off">Выкл</string>
@@ -113,10 +110,7 @@
     <string name="style">Стиль</string>
     <string name="primary_color_hint">Например, #666666 или 666666</string>
     <string name="primary_color">Основной цвет</string>
-    <string name="no_palettes">Цветовые палитры не найдены</string>
-    <string name="wallpaper_colors">Цвета на основе заставки</string>
     <string name="tips_and_support">Советы и поддержка</string>
-    <string name="tips_and_support_desc">О программе, спонсор, лицензии с открытым исходным кодом</string>
     <string name="unsubscribe_tips">Отписаться от ленты \"%1$s\" и удалить все архивные статьи в ней</string>
     <string name="delete_group_tips">Удалить группу \"%1$s\" а также все ленты в ней вместе с архивными статьями</string>
     <string name="group_option_tips">Применить следующие настройки ко всем лентам в этой группе</string>

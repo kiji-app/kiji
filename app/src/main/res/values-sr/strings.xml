@@ -5,7 +5,6 @@
     <string name="three_days">3д</string>
     <string name="primary_color">Примарне боје</string>
     <string name="icons_and_labels">Иконице и ознаке</string>
-    <string name="wallpaper_colors">Боје позадине</string>
     <string name="add_to_group">Додај у групу</string>
     <string name="article_date">Време објављивања чланка</string>
     <string name="images">Слике</string>
@@ -96,7 +95,6 @@
     <string name="value">вредност</string>
     <string name="all_deny_notification_toast">Сва обавештења из групе „%1$s“ су одбијена</string>
     <string name="get_new_updates_desc">Доступна је нова верзија %1$s</string>
-    <string name="help">Помоћ</string>
     <string name="advanced">Напредно</string>
     <string name="must_have_an_account">Морате имати налог најмање 1 налог</string>
     <string name="for_1_month">1 месец</string>
@@ -203,7 +201,6 @@
     <string name="search">Претражи</string>
     <string name="delete_group">Избриши групу</string>
     <string name="article_date_sticky_header">Лепљиво заглавље датума објављивања</string>
-    <string name="no_palettes">Нема палета</string>
     <string name="delete_toast">Избрисано „%1$s“</string>
     <string name="bold">Подебљано</string>
     <string name="rename_toast">Преименовано у „%1$s“</string>
@@ -242,7 +239,6 @@
     <string name="share">Дели</string>
     <string name="add">Додај</string>
     <string name="group_option_tips">Следеће опције се примењују на све фидове у овој групи</string>
-    <string name="only_android_8.1_plus">Само Android 8.1+</string>
     <string name="defaults">Подразумевано</string>
     <string name="go_to">Иди на</string>
     <string name="tos_content"><h5>Политика приватности</h5><br/><p> Вашу приватност схватам веома озбиљно.</p><br/><p> <b>Kiji</b> не прикупља никакве корисничке податке, а све осетљиве информације (лозинке и друге информације о налогу) се безбедно чувају у бази података локалних апликација на Вашем уређају.</p><br/><p> <b>Kiji</b> ће користити следеће дозволе да би Вам пружио услугу.</p><br/><p> - Дозвола за приступ мрежи (за приступ онлајн садржају, како Ви наведете)</p><p> - Преузеће дозволу за статус мреже (да би утврдио да ли уређај тренутно има доступне мрежне услове)</p><p> - Дозвола за услугу у позадини (да аутоматски синхронизује Ваше фаворите за Вас на редовној основи)</p><br/><br/><h5> Услуге трећих страна</h5><br/><p> Ова политика се не примењује на услуге трећих страна које користите са <b>Kiji</b> . Можете прегледати политике приватности услуга трећих страна које користите на њиховим веб-сајтовима </p><br/><br/><h5> Одрицање од одговорности</h5><br/><p> <b>Kiji</b> је само алатка за прикупљање садржаја. Ваше коришћење <b>Kiji-а</b> подлеже законима и прописима Ваше земље и региона, а сваку одговорност која проистиче из Ваших радњи сносићете Ви лично.</p><br/><br/><h5> Лиценца отвореног кода</h5><br/><p> <b>Kiji</b> је пројекат отвореног кода под GNU GPL 3.0 лиценцом отвореног кода[1], која Вам омогућава да бесплатно користите, референцирате и модификујете изворни код <b>Kiji-а</b> , али не дозвољава да се модификовани и изведени код дистрибуира и продаје као комерцијални софтвер затвореног кода. За детаље, погледајте пуну GNU GPL 3.0 лиценцу отвореног кода[2].</p><br/><br/><h5> Додатак</h5><br/><p> - [1] https://github.com/kiji-app/kiji</p><p> - [2] https://www.gnu.org/licenses/gpl-3.0.html</p></string>
@@ -252,14 +248,12 @@
     <string name="upper_case">Велика слова</string>
     <string name="mark_as_read">Означи као прочитано</string>
     <string name="color_and_style">Боја и стил</string>
-    <string name="basic_colors">Основне боје</string>
     <string name="article_desc">Описи чланка</string>
     <string name="unsubscribe">Откажи претплату</string>
     <string name="today">Данас</string>
     <string name="system_default">Системски</string>
     <string name="clear_articles_in_group_toast">Очишћени су сви архивирани чланци у групи „%1$s“</string>
     <string name="reading_fonts">Читање фонтова</string>
-    <string name="tips_and_support_desc">О апликацији, спонзор, лиценце отвореног кода</string>
     <string name="mark_as_unread">Означи као непрочитано</string>
     <string name="change_log">Евиденција промена</string>
     <string name="alignment">Поравнање</string>

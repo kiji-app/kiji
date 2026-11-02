@@ -94,9 +94,7 @@
     <string name="languages">ಭಾಷೆಗಳು</string>
     <string name="help_translate">ಅನುವಾದಿಸಲು ಸಹಾಯ ಮಾಡಿ</string>
     <string name="tips_and_support">ಸಲಹೆಗಳು ಮತ್ತು ಬೆಂಬಲ</string>
-    <string name="tips_and_support_desc">ಕುರಿತು, ಮುಕ್ತ ಮೂಲ ಪರವಾನಗಿಗಳು</string>
     <string name="tos_tips">ಮುಂದುವರಿಯಲು ದಯವಿಟ್ಟು Kiji ನ ಸೇವಾ ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ಓದಿ ಮತ್ತು ಸಮ್ಮತಿಸಿ.</string>
-    <string name="only_android_8.1_plus">ಆಂಡ್ರಾಯ್ಡ್ 8.1+ ಮಾತ್ರ</string>
     <string name="dark_theme">ಡಾರ್ಕ್ ಥೀಮ್</string>
     <string name="amoled_dark_theme">ಕಪ್ಪು ಗಾಢ ಥೀಮ್</string>
     <string name="tonal_elevation">ಟೋನಲ್ ಎಲಿವೇಶನ್</string>
@@ -124,9 +122,6 @@
     <string name="browse_tos_tips"><i><u>ಸೇವಾ ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತಾ ನೀತಿ</u></i> ಬ್ರೌಸ್ ಮಾಡಿ</string>
     <string name="terms_of_service">ಸೇವಾ ನಿಯಮಗಳು</string>
     <string name="agree">ಒಪ್ಪಿಕೊಳ್ಳಿ</string>
-    <string name="wallpaper_colors">ವಾಲ್‌ಪೇಪರ್ ಬಣ್ಣಗಳು</string>
-    <string name="no_palettes">ಪ್ಯಾಲೆಟ್‌ಗಳಿಲ್ಲ</string>
-    <string name="basic_colors">ಮೂಲ ಬಣ್ಣಗಳು</string>
     <string name="primary_color">ಪ್ರಾಥಮಿಕ ಬಣ್ಣ</string>
     <string name="primary_color_hint">#666666 ಅಥವಾ 666666 ನಂತೆ</string>
     <string name="appearance">ತೋರಿಕೆ</string>
@@ -141,7 +136,6 @@
     <string name="flow_page">ಫ್ಲೋ ಪುಟ</string>
     <string name="change_log">ಚೇಂಜ್ಲಾಗ್</string>
     <string name="download_failure">ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="help">ಸಹಾಯ</string>
     <string name="on_start">ಪ್ರಾರಂಭದಲ್ಲಿ</string>
     <string name="initial_filter">ಆರಂಭಿಕ ಫಿಲ್ಟರ್</string>
     <string name="preview_article_title">ಲಾರ್ಡ್ ಆಫ್ ದಿ ಮಿಸ್ಟರೀಸ್ ಕಾದಂಬರಿ ಕೊನೆಗೂ ಅಂತ್ಯಗೊಂಡಿದೆ</string>

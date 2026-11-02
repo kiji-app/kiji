@@ -183,7 +183,6 @@
     <string name="mark_as_unread">읽지 않음으로 표시</string>
     <string name="mark_as_starred">보관함에 저장</string>
     <string name="accounts_desc">로컬, FreshRSS</string>
-    <string name="tips_and_support_desc">정보, 오픈소스 라이선스</string>
     <string name="toggle_read">읽음 표시 토글</string>
     <string name="mark_below_as_read">이 아래로 읽음 표시</string>
     <string name="appearance">모양</string>

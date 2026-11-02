@@ -11,7 +11,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.RssFeed
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -37,6 +36,7 @@ import me.ash.reader.domain.model.account.AccountType
 import me.ash.reader.domain.model.account.security.GoogleReaderSecurityKey
 import me.ash.reader.ui.component.base.RYDialog
 import me.ash.reader.ui.component.base.RYOutlineTextField
+import me.ash.reader.ui.component.base.WavyProgressIndicator
 import me.ash.reader.ui.ext.collectAsStateValue
 import me.ash.reader.ui.ext.showToast
 import me.ash.reader.ui.page.common.RouteName
@@ -71,7 +71,7 @@ fun AddGoogleReaderAccountDialog(
         },
         icon = {
             if (accountUiState.isLoading) {
-                CircularProgressIndicator(
+                WavyProgressIndicator(
                     modifier = Modifier.size(24.dp),
                     color = MaterialTheme.colorScheme.onSurface,
                 )

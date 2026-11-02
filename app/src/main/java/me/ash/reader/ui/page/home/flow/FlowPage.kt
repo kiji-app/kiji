@@ -98,6 +98,7 @@ import me.ash.reader.ui.component.scrollbar.drawVerticalScrollIndicator
 import me.ash.reader.ui.component.scrollbar.scrollIndicator
 import me.ash.reader.ui.ext.collectAsStateValue
 import me.ash.reader.ui.ext.openURL
+import me.ash.reader.ui.ext.swipeToChangeFilter
 import me.ash.reader.ui.motion.Direction
 import me.ash.reader.ui.motion.sharedXAxisTransitionSlow
 import me.ash.reader.ui.motion.sharedYAxisTransitionExpressive
@@ -637,7 +638,12 @@ fun FlowPage(
                             )
                             .also { currentPullToLoadState = it }
 
-                    Box(modifier = Modifier.fillMaxSize()) {
+                    Box(
+                        modifier =
+                            Modifier.fillMaxSize().swipeToChangeFilter(filterState.filter) {
+                                viewModel.changeFilter(filterState.copy(filter = it))
+                            }
+                    ) {
                         LazyColumn(
                             modifier =
                                 Modifier.pullToLoad(

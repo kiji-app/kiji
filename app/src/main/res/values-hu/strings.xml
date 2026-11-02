@@ -147,7 +147,6 @@
     <string name="help_translate">Segítsen a fordításban</string>
     <string name="use_device_languages">Eszköz nyelvének használata</string>
     <string name="tips_and_support">Tippek és támogatás</string>
-    <string name="tips_and_support_desc">Névjegy, szponzorálás, nyílt forráskódú licencek</string>
     <string name="welcome">Üdvözöljük</string>
     <string name="browse_tos_tips">A <i><u>használati feltételek és adatvédelmi irányelvek</u></i> böngészése</string>
     <string name="terms_of_service">Használati feltételek</string>
@@ -155,10 +154,6 @@
     <string name="article_list">Cikklista</string>
     <string name="tos_content"><h5> Adatvédelmi irányelvek </h5> <br/> <p> Nagyon komolyan veszem a magánéletét. </p> <br/> <p> A <b>Kiji</b> nem gyűjt semmilyen felhasználói adatot, és minden érzékeny információ (jelszavak és egyéb fiókinformációk) biztonságosan van tárolva az alkalmazás helyi adatbázisában az Ön eszközén. </p> <br/> <p> A <b>Kiji</b> a következő engedélyeket használja a szolgáltatás nyújtásához: </p> <br/> <p> – Hálózati hozzáférés engedély (az Ön által megadott internetes tartalmak eléréséhez). </p> <p> – Hálózatállapot lekérése engedély (annak meghatározásához, hogy az eszköz jelenleg rendelkezik-e elérhető hálózati feltételekkel). </p> <p> – Háttérszolgáltatási engedély (a kedvencek automatikus, rendszeres szinkronizálásához). </p> <br/> <br/> <h5> Harmadik féltől származó szolgáltatások </h5> <br/> <p> Ez az irányelv nem vonatkozik azokra a harmadik féltől származó szolgáltatásokra, amelyeket a <b>Kiji</b> szolgáltatással együtt használ. Az Ön által használt harmadik féltől származó szolgáltatások adatvédelmi irányelveit azok weboldalán tekintheti meg. </p> <br/> <br/> <h5> Felelősségi nyilatkozatok </h5> <br/> <p> A <b>Kiji</b> csak egy tartalomgyűjtő eszköz. A <b>Kiji</b> használata az Ön országának és régiójának törvényei és szabályai szerint történik, és az Ön tevékenységéből eredő felelősséget Ön személyesen viseli. </p> <br/> <br/> <h5> Nyílt forráskódú licenc </h5> <br/> <p> A <b>Kiji</b> egy nyílt forráskódú projekt a GNU GPL 3.0 nyílt forráskódú licenc[1] szerint, amely lehetővé teszi a <b>Kiji</b> forráskódjának ingyenes használatát, hivatkozását és módosítását, de nem engedélyezi a módosított és származtatott kód zárt forráskódú kereskedelmi szoftverként való terjesztését és értékesítését. A részleteket nézze meg a teljes GNU GPL 3.0 nyílt forráskódú licencet[2]. </p> <br/> <br/> <h5> Függelék </h5> <br/> <p> - [1] https://github.com/kiji-app/kiji </p> <p> - [2] https://www.gnu.org/licenses/gpl-3.0.html </p></string>
     <string name="agree">Elfogadás</string>
-    <string name="wallpaper_colors">Háttérszínek</string>
-    <string name="no_palettes">Nincsenek paletták</string>
-    <string name="only_android_8.1_plus">Csak Android 8.1+</string>
-    <string name="basic_colors">Alapvető színek</string>
     <string name="primary_color">Elsődleges szín</string>
     <string name="primary_color_hint">Például #666666 vagy 666666</string>
     <string name="appearance">Megjelenés</string>
@@ -182,7 +177,6 @@
     <string name="check_failure">A frissítések keresése sikertelen</string>
     <string name="download_failure">Nem sikerült letölteni a frissítéseket</string>
     <string name="rate_limit">A kérési sebesség korlátozott</string>
-    <string name="help">Súgó</string>
     <string name="on_start">Indításkor</string>
     <string name="initial_page">Kezdőoldal</string>
     <string name="initial_filter">Alapértelmezett szűrő</string>

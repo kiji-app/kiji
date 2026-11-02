@@ -1,4 +1,5 @@
 import java.io.FileInputStream
+import java.time.Instant
 import java.util.Properties
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeFeatureFlag
 
@@ -35,6 +36,7 @@ android {
         versionCode = 1
         versionName = "0.1.0"
 
+        buildConfigField("String", "BUILD_TIME", "\"${Instant.now()}\"")
         buildConfigField(
             "String",
             "USER_AGENT_STRING",

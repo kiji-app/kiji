@@ -109,7 +109,7 @@
     <string name="interaction_desc">Startup page, gestures</string>
     <string name="languages">Languages</string>
     <string name="help_translate">Help translate</string>
-    <string name="translatable_url" translatable="false">https://github.com/kiji-app/kiji</string>
+    <string name="translatable_url" translatable="false">https://hosted.weblate.org/engage/readyou/</string>
     <string name="use_device_languages">Use device language</string>
     <string name="english" translatable="false">English</string>
     <string name="chinese_simplified" translatable="false">简体中文</string>
@@ -125,17 +125,12 @@
     <string name="indonesian" translatable="false">Bahasa Indonesia</string>
     <string name="chinese_traditional" translatable="false">繁體中文</string>
     <string name="tips_and_support">Tips &amp; support</string>
-    <string name="tips_and_support_desc">About, sponsor, open source licenses</string>
     <string name="welcome">Welcome</string>
     <string name="tos_tips">Please read and agree to Kiji\'s terms of service and privacy policy to continue.</string>
     <string name="browse_tos_tips">Browse the <i><u>terms of service and privacy policy</u></i></string>
     <string name="terms_of_service">Terms of service</string>
     <string name="tos_content"><h5> Privacy policy </h5> <br /> <p> We take your privacy very seriously. </p> <br /> <p> <b>Kiji</b> does not collect any user data, and all sensitive information (passwords and other account information) is stored securely in the local application database on your device. </p> <br /> <p> <b>Kiji</b> will use the following permissions to provide you with the service. </p> <br /> <p> - Access network permission (to access online content as you specify) </p> <p> - Get network status permission (to determine if the device currently has available network conditions) </p> <p> - Background service permission (to automatically sync your favorites for you on a regular basis) </p> <br /> <br /> <h5> Third-party services </h5> <br /> <p> This policy does not apply to third-party services that you use with <b>Kiji</b>. You can review the privacy policies of the third-party services you use on their websites </p> <br /> <br /> <h5> Disclaimers </h5> <br /> <p> <b>Kiji</b> is a content collection tool only. Your use of <b>Kiji</b> is subject to the laws and regulations of your country and region, and any liability arising from your actions will be borne by you personally. </p> <br /> <br /> <h5> Open source license </h5> <br /> <p> <b>Kiji</b> is an open source project under the GNU GPL 3.0 Open Source License[1], which allows you to use, reference, and modify the source code of <b>Kiji</b> free of charge, but does not allow the modified and derived code to be distributed and sold as closed-source commercial software. For details, please see the full GNU GPL 3.0 Open Source License[2]. </p> <br /> <br /> <h5> Appendix </h5> <br /> <p> - [1] https://github.com/kiji-app/kiji </p> <p> - [2] https://www.gnu.org/licenses/gpl-3.0.html </p></string>
     <string name="agree">Agree</string>
-    <string name="wallpaper_colors">Wallpaper colors</string>
-    <string name="no_palettes">No palettes</string>
-    <string name="only_android_8.1_plus">Only Android 8.1+</string>
-    <string name="basic_colors">Basic colors</string>
     <string name="primary_color">Primary color</string>
     <string name="primary_color_hint">Like #666666 or 666666</string>
     <string name="appearance">Appearance</string>
@@ -158,7 +153,6 @@
     <string name="based_on_read_you" translatable="false">Based on Read You</string>
     <string name="read_you_link" translatable="false">https://github.com/ReadYouApp/ReadYou</string>
     <string name="github_link" translatable="false">https://github.com/kiji-app/kiji</string>
-        <string name="wiki_link" translatable="false">https://github.com/kiji-app/kiji</string>
     <string name="update_link">https://api.github.com/repos/kiji-app/kiji/releases/latest</string>
     <string name="change_log">Changelog</string>
     <string name="update">Update</string>
@@ -168,7 +162,6 @@
     <string name="check_failure">Failed to check for updates</string>
     <string name="download_failure">Could not download updates</string>
     <string name="rate_limit">The request rate is limited</string>
-    <string name="help">Help</string>
     <string name="on_start">On start</string>
     <string name="initial_page">Startup page</string>
     <string name="initial_filter">Default filter</string>
@@ -283,7 +276,7 @@
     <string name="keep_archived_tips">Archived items are articles which are marked as read, not starred and not tagged. The \"Keep archived articles\" setting is only effective on this device. Older archived articles will be deleted from this device. The deletion of articles cannot be undone.</string>
     <string name="switch_account">Switch</string>
     <string name="add">Add</string>
-    <string name="accounts_tips">You can switch accounts by tapping on the account name on the feed page</string>
+    <string name="accounts_tips">You can switch accounts by tapping the title on the feeds page</string>
     <string name="server_url">Server URL</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -387,4 +380,38 @@
     <string name="parse_full_content_desc">Fetch full articles from webpages</string>
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
+    <string name="whats_new_this_release">What\'s new in this release</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="version">Version</string>
+    <string name="build_time">Build time</string>
+    <string name="app_info">App info</string>
+    <string name="copied_to_clipboard">%1$s copied to clipboard</string>
+    <string name="release_notes_link" translatable="false">https://github.com/kiji-app/kiji/releases</string>
+    <string name="theme_pure_white">Pure White</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_spring_blossom">Spring Blossom</string>
+    <string name="theme_midnight_dusk">Midnight Dusk</string>
+    <string name="theme_strawberry_daiquiri">Strawberry Daiquiri</string>
+    <string name="theme_chocolate_strawberries">Chocolate Strawberries</string>
+    <string name="theme_teal_ocean">Teal Ocean</string>
+    <string name="theme_sapphire_dusk">Sapphire Dusk</string>
+    <string name="theme_lavender">Lavender</string>
+    <string name="theme_violet">Violet</string>
+    <string name="theme_tako">Tako</string>
+    <string name="theme_yang">Yang</string>
+    <string name="theme_yin">Yin</string>
+    <string name="theme_lime_time">Lime Time</string>
+    <string name="theme_flat_lime">Flat Lime</string>
+    <string name="theme_yotsuba">Yotsuba</string>
+    <string name="theme_doki">Doki</string>
+    <string name="themes">Themes</string>
+    <string name="theme_dynamic_light">A Brighter You (Dynamic)</string>
+    <string name="theme_dynamic_dark">A Calmer You (Dynamic)</string>
+    <string name="theme_wallpaper_secondary">Wallpaper 2</string>
+    <string name="theme_wallpaper_tertiary">Wallpaper 3</string>
+    <string name="theme_blue">Blue</string>
+    <string name="theme_pink">Pink</string>
+    <string name="theme_purple">Purple</string>
+    <string name="theme_yellow">Yellow</string>
+    <string name="theme_custom">Custom color</string>
 </resources>

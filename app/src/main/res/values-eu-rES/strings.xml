@@ -102,7 +102,6 @@
     <string name="help_translate">Itzulpenarekin lagundu</string>
     <string name="use_device_languages">Gailuaren hizkuntza erabili</string>
     <string name="tips_and_support">Aholkuak eta babesa</string>
-    <string name="tips_and_support_desc">Honi buruz, kode irekiko lizentziak</string>
     <string name="welcome">Ongi etorri</string>
     <string name="tos_tips">Mesedez irakurri eta onartu Kiji-ren zerbitzu-baldintzak eta pribatutasun politika jarraitu ahal izateko.</string>
     <string name="browse_tos_tips">Nabigatu <i><u>zerbitzu-baldintzetan eta pribatutasun politikan</u></i></string>
@@ -217,10 +216,6 @@
         &lt;/p&gt;
     </string>
     <string name="agree">Ados</string>
-    <string name="wallpaper_colors">Horma-paperaren koloreak</string>
-    <string name="no_palettes">Paletarik ez</string>
-    <string name="only_android_8.1_plus">Android 8.1+ soilik</string>
-    <string name="basic_colors">Oinarrizko koloreak</string>
     <string name="primary_color">Lehen kolorea</string>
     <string name="primary_color_hint">#666666 edo 666666 bezala</string>
     <string name="appearance">Itxura</string>
@@ -248,7 +243,6 @@
     <string name="check_failure">Ezin izan da eguneraketarik bilatu</string>
     <string name="download_failure">Ezin izan da eguneraketarik deskargatu</string>
     <string name="rate_limit">Eskaera tasa mugatuta dago</string>
-    <string name="help">Laguntza</string>
     <string name="on_start">Abioan</string>
     <string name="initial_page">Hasierako orria</string>
     <string name="initial_filter">Hasierako iragazkia</string>

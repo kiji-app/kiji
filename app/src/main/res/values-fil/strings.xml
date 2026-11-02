@@ -65,15 +65,10 @@
     <string name="help_translate">Tumulong magsalin</string>
     <string name="use_device_languages">Gamitin ang wika ng device</string>
     <string name="tips_and_support">Mga tip at support</string>
-    <string name="tips_and_support_desc">Tungkol, mga open source na lisensya</string>
     <string name="welcome">Maligayang Pagdating</string>
     <string name="tos_tips">Mangyaring basahin at sumang-ayon sa Mga Tuntunin ng Serbisyo at Patakaran sa Privacy ng Kiji upang magpatuloy.</string>
     <string name="terms_of_service">Mga Tuntunin sa Serbisyo</string>
     <string name="agree">Sumang-ayon</string>
-    <string name="wallpaper_colors">Mga kulay ng wallpaper</string>
-    <string name="no_palettes">Walang mga pallete</string>
-    <string name="only_android_8.1_plus">Sa Android 8.1+ lamang</string>
-    <string name="basic_colors">Mga basic na kulay</string>
     <string name="primary_color">Pangunahing Kulay</string>
     <string name="primary_color_hint">Tulad ng #666666 o 666666</string>
     <string name="appearance">Hitsura</string>
@@ -95,7 +90,6 @@
     <string name="check_failure">Nabigong tumingin ng mga update</string>
     <string name="download_failure">Hindi ma-download ang mga update</string>
     <string name="rate_limit">Na-rate limit ang request</string>
-    <string name="help">Tulong</string>
     <string name="on_start">Sa Simula</string>
     <string name="initial_page">Initial na pahina</string>
     <string name="initial_filter">Initial na filter</string>

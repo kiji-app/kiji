@@ -1,12 +1,8 @@
 package me.ash.reader.domain.model.general
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.rounded.Subject
-import androidx.compose.material.icons.outlined.FiberManualRecord
-import androidx.compose.material.icons.rounded.FiberManualRecord
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.StarOutline
-import androidx.compose.material.icons.rounded.Subject
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -14,6 +10,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import me.ash.reader.R
+import me.ash.reader.ui.icons.RokkuIcons
 import me.ash.reader.domain.model.general.Filter.Companion.All
 import me.ash.reader.domain.model.general.Filter.Companion.Starred
 import me.ash.reader.domain.model.general.Filter.Companion.Unread
@@ -61,13 +58,13 @@ class Filter private constructor(
         )
         val Unread = Filter(
             index = 1,
-            iconOutline = Icons.Outlined.FiberManualRecord,
-            iconFilled = Icons.Rounded.FiberManualRecord,
+            iconOutline = RokkuIcons.LibraryOutline,
+            iconFilled = RokkuIcons.LibraryFilled,
         )
         val All = Filter(
             index = 2,
-            iconOutline = Icons.AutoMirrored.Rounded.Subject,
-            iconFilled = Icons.AutoMirrored.Rounded.Subject,
+            iconOutline = RokkuIcons.BrowseOutline,
+            iconFilled = RokkuIcons.BrowseFilled,
         )
         val values = listOf(Starred, Unread, All)
     }

@@ -1,20 +1,38 @@
 package me.ash.reader.ui.svg
 
 import android.util.Log
+import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.toArgb
 import me.ash.reader.ui.theme.palette.TonalPalettes
 
 object SVGString
 
-fun String.parseDynamicColor(tonalPalettes: TonalPalettes, isDarkTheme: Boolean): String =
+private fun ColorScheme.svgColor(scheme: String, tone: Int): Color? =
+    when (scheme to tone) {
+        "p" to 50 -> primary
+        "s" to 30 -> onSecondaryContainer
+        "s" to 40,
+        "s" to 50 -> secondary
+        "s" to 90 -> secondaryContainer
+        "t" to 40 -> tertiary
+        "t" to 90 -> tertiaryContainer
+        else -> null
+    }
+
+fun String.parseDynamicColor(
+    tonalPalettes: TonalPalettes,
+    isDarkTheme: Boolean,
+    colorScheme: ColorScheme? = null,
+): String =
     replace("fill=\"(.+?)\"".toRegex()) {
         val value = it.groupValues[1]
         Log.i("RLog", "parseDynamicColor: $value")
         if (value.startsWith("#")) return@replace it.value
         try {
             val (scheme, tone) = value.split("(?<=\\d)(?=\\D)|(?=\\d)(?<=\\D)".toRegex())
-            val argb = when (scheme) {
+            val argb = colorScheme?.svgColor(scheme, tone.toInt())?.compositeOver(colorScheme.surface)?.toArgb() ?: when (scheme) {
                 "p" -> tonalPalettes.primary[tone.toInt().autoToDarkTone(isDarkTheme)]
                 "s" -> tonalPalettes.secondary[tone.toInt().autoToDarkTone(isDarkTheme)]
                 "t" -> tonalPalettes.tertiary[tone.toInt().autoToDarkTone(isDarkTheme)]

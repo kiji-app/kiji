@@ -3,7 +3,6 @@ package me.ash.reader.ui.component
 import android.os.Build
 import android.view.SoundEffectConstants
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -48,7 +47,7 @@ fun FilterBar(
 
     val containerHeight = when (filterBarStyle) {
         FlowFilterBarStylePreference.Icon.value -> 64.dp
-        else -> 80.dp
+        else -> 68.dp
     }
 
     Surface(
@@ -62,7 +61,6 @@ fun FilterBar(
                 .windowInsetsPadding(NavigationBarDefaults.windowInsets)
                 .defaultMinSize(minHeight = containerHeight)
                 .selectableGroup(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
 

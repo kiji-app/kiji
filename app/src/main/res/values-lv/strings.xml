@@ -21,7 +21,6 @@
     <string name="mark_all_as_read">Atzīmēt visus kā lasītus⁣</string>
     <string name="mark_as_read_one_day">Atzīmēt kā lasītus, kas vecāki par dienu</string>
     <string name="help_translate">Palīdziet iztulkot</string>
-    <string name="help">Palīdzība</string>
     <string name="on_start">Kad atver lietotni</string>
     <string name="basic_fonts">Pamata fonti</string>
     <string name="feeds_page">Ziņu plūsmu lapa</string>
@@ -71,9 +70,7 @@
     <string name="earliest">Vecākos augšgalā</string>
     <string name="delete_group">Dzēst grupu</string>
     <string name="open_with">Atvērt %1$s</string>
-    <string name="tips_and_support_desc">Par lietotni, sponsors, atvērtā pirmkoda licences</string>
     <string name="tips_and_support">Padomi un atbalsts</string>
-    <string name="basic_colors">Pamatkrāsas</string>
     <string name="primary_color_hint">Piemēram, #666666 vai 666666</string>
     <string name="appearance">Izskats</string>
     <string name="off">Izslēgts</string>
@@ -188,5 +185,4 @@
     <string name="move_to_group">Pārvietot uz grupu</string>
     <string name="color_and_style">Krāsa un stils</string>
     <string name="use_device_languages">Izmantot ierīces valodu</string>
-    <string name="only_android_8.1_plus">Tikai Android 8.1+</string>
 </resources>

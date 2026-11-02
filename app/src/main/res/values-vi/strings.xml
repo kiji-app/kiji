@@ -84,7 +84,6 @@
     <string name="help_translate">Giúp dịch</string>
     <string name="use_device_languages">Dùng ngôn ngữ thiết bị</string>
     <string name="tips_and_support">Mẹo &amp; hỗ trợ</string>
-    <string name="tips_and_support_desc">Giới thiệu, giấy phép mã nguồn mở</string>
     <string name="welcome">Chào mừng</string>
     <string name="tos_tips">Đọc và đồng ý với Điều khoản dịch vụ và Chính sách quyền riêng tư của Kiji để tiếp tục.</string>
     <string name="browse_tos_tips">Đọc <i><u>Điều khoản Dịch vụ và Chính sách Bảo mật</u></i></string>
@@ -117,14 +116,10 @@
     <string name="color_and_style">Giao diện</string>
     <string name="color_and_style_desc">Màu sắc, chủ đề, bố cục</string>
     <string name="interaction_desc">Với các thành phần của app</string>
-    <string name="basic_colors">Màu chủ đề</string>
     <string name="primary_color">Màu chính</string>
     <string name="primary_color_hint">Kiểu như #666666 hoặc 666666</string>
     <string name="appearance">Giao diện</string>
     <string name="style">Kiểu</string>
-    <string name="only_android_8.1_plus">Đối với Android 8.1+</string>
-    <string name="wallpaper_colors">Màu nền</string>
-    <string name="no_palettes">Không có bảng màu</string>
     <string name="basic_fonts">Phông chữ</string>
     <string name="dark_theme">Chủ đề Tối</string>
     <string name="use_device_theme">Giống như thiết bị</string>
@@ -147,7 +142,6 @@
     <string name="check_failure">Không thể kiểm tra cập nhật</string>
     <string name="download_failure">Không thể tải về bản cập nhật</string>
     <string name="rate_limit">Giới hạn tần suất yêu cầu</string>
-    <string name="help">Trợ giúp</string>
     <string name="on_start">Khi mở app</string>
     <string name="preview_article_title">Người dùng rủ nhau chuyển app khi Zalo bắt đầu thu phí</string>
     <string name="preview_article_desc">Nếu con người ta cứ chạy đua nhau, mua vui cho nhau như những chú hề thì tại sao lại có người cho rằng cuộc đời là bi kịch?</string>

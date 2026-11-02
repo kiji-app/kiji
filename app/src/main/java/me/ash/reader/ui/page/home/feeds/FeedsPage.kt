@@ -7,6 +7,7 @@ import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
@@ -17,12 +18,12 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsBottomHeight
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.ModalBottomSheetValue
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.UnfoldLess
 import androidx.compose.material.icons.rounded.UnfoldMore
@@ -31,10 +32,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.material3.pulltorefresh.PullToRefreshDefaults
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -47,6 +50,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateMap
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
@@ -73,12 +77,14 @@ import me.ash.reader.ui.component.FilterBar
 import me.ash.reader.ui.component.base.DisplayText
 import me.ash.reader.ui.component.base.FeedbackIconButton
 import me.ash.reader.ui.component.base.RYScaffold
+import me.ash.reader.ui.component.base.WavyProgressIndicator
 import me.ash.reader.ui.component.scrollbar.drawVerticalScrollIndicator
 import me.ash.reader.ui.ext.collectAsStateValue
 import me.ash.reader.ui.ext.currentAccountId
 import me.ash.reader.ui.ext.findActivity
 import me.ash.reader.ui.ext.getCurrentVersion
 import me.ash.reader.ui.ext.surfaceColorAtElevation
+import me.ash.reader.ui.ext.swipeToChangeFilter
 import me.ash.reader.ui.page.common.RouteName
 import me.ash.reader.ui.page.home.feeds.accounts.AccountsTab
 import me.ash.reader.ui.page.home.feeds.drawer.feed.FeedOptionDrawer
@@ -97,6 +103,7 @@ fun FeedsPage(
     feedsViewModel: FeedsViewModel = hiltViewModel(),
     subscribeViewModel: SubscribeViewModel = hiltViewModel(),
     navigateToSettings: () -> Unit,
+    navigateToAbout: () -> Unit,
     navigationToFlow: () -> Unit,
     navigateToAccountList: () -> Unit,
     navigateToAccountDetail: (Int) -> Unit,
@@ -196,17 +203,6 @@ fun FeedsPage(
                         interactionSource = remember { MutableInteractionSource() },
                     ),
                 title = {},
-                navigationIcon = {
-                    FeedbackIconButton(
-                        modifier = Modifier.size(20.dp),
-                        imageVector = Icons.Outlined.Settings,
-                        contentDescription = stringResource(R.string.settings),
-                        tint = MaterialTheme.colorScheme.onSurface,
-                        showBadge = newVersion.whetherNeedUpdate(currentVersion, skipVersion),
-                    ) {
-                        navigateToSettings()
-                    }
-                },
                 actions = {
                     if (subscribeViewModel.rssService.get().addSubscription) {
                         FeedbackIconButton(
@@ -217,6 +213,12 @@ fun FeedsPage(
                             subscribeViewModel.showDrawer()
                         }
                     }
+                    FeedsMoreMenu(
+                        showBadge = newVersion.whetherNeedUpdate(currentVersion, skipVersion),
+                        versionName = currentVersion.toString(),
+                        navigateToSettings = navigateToSettings,
+                        navigateToAbout = navigateToAbout,
+                    )
                 },
                 colors =
                     TopAppBarDefaults.topAppBarColors(
@@ -228,10 +230,48 @@ fun FeedsPage(
             )
         },
         content = {
-            PullToRefreshBox(state = syncingState, isRefreshing = isSyncing, onRefresh = doSync) {
-                LazyColumn(modifier = Modifier.fillMaxSize().drawVerticalScrollIndicator(listState), state = listState) {
+            PullToRefreshBox(
+                state = syncingState,
+                isRefreshing = isSyncing,
+                onRefresh = doSync,
+                indicator = {
+                    Surface(
+                        modifier =
+                            Modifier.align(Alignment.TopCenter).size(48.dp).graphicsLayer {
+                                val fraction = syncingState.distanceFraction.coerceIn(0f, 1f)
+                                translationY =
+                                    fraction * PullToRefreshDefaults.PositionalThreshold.toPx() -
+                                        size.height
+                                scaleX = fraction
+                                scaleY = fraction
+                                alpha = fraction
+                            },
+                        shape = CircleShape,
+                        color = MaterialTheme.colorScheme.surfaceContainerHigh,
+                        shadowElevation = 6.dp,
+                    ) {
+                        Box(contentAlignment = Alignment.Center) {
+                            WavyProgressIndicator(
+                                modifier = Modifier.size(28.dp),
+                                progress =
+                                    if (isSyncing) null
+                                    else ({ syncingState.distanceFraction.coerceIn(0f, 1f) }),
+                            )
+                        }
+                    }
+                },
+            ) {
+                LazyColumn(
+                    modifier =
+                        Modifier.fillMaxSize()
+                            .swipeToChangeFilter(filterState.filter) {
+                                feedsViewModel.changeFilter(filterState.copy(filter = it))
+                            }
+                            .drawVerticalScrollIndicator(listState),
+                    state = listState,
+                ) {
                     item {
-                        DisplayText(text = feedsUiState.account?.name ?: "", desc = "") {
+                        DisplayText(text = filterState.filter.toName(), desc = "") {
                             hapticFeedback.performHapticFeedback(HapticFeedbackType.ContextClick)
                             accountTabVisible = true
                         }

@@ -106,15 +106,10 @@
     <string name="languages">Llenguatges</string>
     <string name="help_translate">Ajuda a la traducció</string>
     <string name="use_device_languages">Aplica el llenguatge del dispositiu</string>
-    <string name="tips_and_support_desc">Sobre les llicències de codi obert</string>
     <string name="welcome">Benvinguts/des</string>
     <string name="browse_tos_tips">Navega pels <i><u>Termes de Servei i Política de Privacitat</u></i></string>
     <string name="terms_of_service">Termes de Servei</string>
     <string name="agree">Accepto</string>
-    <string name="wallpaper_colors">Colors de fons</string>
-    <string name="no_palettes">Sense paletes de colors</string>
-    <string name="only_android_8.1_plus">Només Android 8.1 i superior</string>
-    <string name="basic_colors">Colors bàsics</string>
     <string name="primary_color_hint">Com #666666 o 666666</string>
     <string name="appearance">Aparença</string>
     <string name="style">Estil</string>
@@ -143,7 +138,6 @@
     <string name="accounts_desc">Local, Fresh RSS</string>
     <string name="tips_and_support">Consells i suport</string>
     <string name="rate_limit">El rati de peticions es limitat</string>
-    <string name="help">Ajuda</string>
     <string name="on_start">Al iniciar</string>
     <string name="initial_page">Pàgina inicial</string>
     <string name="initial_filter">Filtre inicial</string>

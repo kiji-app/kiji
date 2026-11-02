@@ -15,7 +15,6 @@ import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
-import androidx.compose.material3.LoadingIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,6 +25,7 @@ import java.util.Date
 import me.ash.reader.infrastructure.preference.LocalReadingRenderer
 import me.ash.reader.infrastructure.preference.LocalReadingSubheadUpperCase
 import me.ash.reader.infrastructure.preference.ReadingRendererPreference
+import me.ash.reader.ui.component.base.WavyProgressIndicator
 import me.ash.reader.ui.component.reader.LocalTextContentWidth
 import me.ash.reader.ui.component.reader.Reader
 import me.ash.reader.ui.component.scrollbar.drawVerticalScrollIndicator
@@ -73,7 +73,7 @@ fun Content(
         }
 
     if (isLoading) {
-        Column { LoadingIndicator(modifier = Modifier.size(56.dp)) }
+        Column { WavyProgressIndicator(modifier = Modifier.size(56.dp)) }
     } else {
 
         when (renderer) {

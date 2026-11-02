@@ -108,17 +108,12 @@
     <string name="help_translate">Pomóż w tłumaczeniu</string>
     <string name="use_device_languages">Zgodny z systemem</string>
     <string name="tips_and_support">Porady i wsparcie</string>
-    <string name="tips_and_support_desc">O aplikacji, sponsorowanie, licencje</string>
     <string name="welcome">Witamy</string>
     <string name="tos_tips">Aby kontynuować, przeczytaj i zaakceptuj warunki korzystania z usługi Kiji oraz politykę prywatności.</string>
     <string name="browse_tos_tips">Zapoznaj się z <i><u>warunkami korzystania z  usługi i polityką prywatności</u></i></string>
     <string name="terms_of_service">Warunki świadczenia usługi</string>
     <string name="tos_content"><h5>Polityka prywatności</h5> <br/> <p>Twoja prywatność jest dla nas ważna.</p> <br/> <p> <b>Kiji</b> nie zbiera żadnych danych użytkownika, a wszystkie poufne informacje (hasła i inne informacje o koncie) są bezpiecznie przechowywane w lokalnej bazie danych aplikacji na Twoim urządzeniu.</p> <br/> <p> <b>Kiji</b> będzie korzystać z następujących uprawnień, aby świadczyć Ci usługę.</p> <br/> <p> - Uprawnienie dostępu do sieci (aby uzyskać dostęp do treści online zgodnie z Twoimi ustawieniami)</p> <p> - Uprawnienie uzyskania stanu sieci (aby określić, czy urządzenie ma obecnie dostępne warunki sieciowe)</p> <p> - Uprawnienie usługi w tle (aby regularnie automatycznie synchronizować Twoje ulubione)</p> <br/> <br/> <h5>Usługi stron trzecich</h5> <br/> <p> Niniejsza polityka nie dotyczy usług stron trzecich, z których korzystasz w <b>Kiji</b>. Możesz zapoznać się z polityką prywatności usług stron trzecich, z których korzystasz na ich stronach internetowych </p> <br/> <br/> <h5> Zastrzeżenia </h5> <br/> <p> <b>Kiji</b> jest wyłącznie narzędziem do gromadzenia treści. Korzystanie z <b>Kiji</b> podlega prawom i regulacjom obowiązującym w Twoim kraju i regionie, a wszelka odpowiedzialność wynikająca z Twoich działań będzie ponoszona przez Ciebie osobiście. </p> <br/> <br/> <h5> Licencja open source </h5> <br/> <p> <b>Kiji</b> jest projektem typu open source na podstawie licencji GNU GPL 3.0[1], która pozwala na bezpłatne korzystanie, odwoływanie się do kodu źródłowego <b>Kiji</b> i jego modyfikację, ale nie zezwala na dystrybucję i sprzedaż zmodyfikowanego i pochodnego kodu jako zamkniętego oprogramowania komercyjnego. Aby uzyskać szczegółowe informacje, zapoznaj się z pełną licencją GNU GPL 3.0[2]. </p> <br/> <br/> <h5> Załącznik </h5> <br/> <p> - [1] https://github.com/kiji-app/kiji </p> <p> - [2] https://www.gnu.org/licenses/gpl-3.0.html </p></string>
     <string name="agree">Zgadzam się</string>
-    <string name="wallpaper_colors">Kolory z tapety</string>
-    <string name="no_palettes">Brak palet</string>
-    <string name="only_android_8.1_plus">Tylko dla Androida 8.1 lub nowszych</string>
-    <string name="basic_colors">Kolory podstawowe</string>
     <string name="primary_color">Kolor główny</string>
     <string name="primary_color_hint">Format: #666666 lub 666666</string>
     <string name="appearance">Wygląd</string>
@@ -146,7 +141,6 @@
     <string name="check_failure">Nie udało się sprawdzić dostępności aktualizacji</string>
     <string name="download_failure">Nie udało się pobrać aktualizacji</string>
     <string name="rate_limit">Limit częstotliwości żądań</string>
-    <string name="help">Pomoc</string>
     <string name="on_start">Po uruchomieniu</string>
     <string name="initial_page">Strona startowa</string>
     <string name="initial_filter">Filtr domyślny</string>

@@ -10,7 +10,6 @@
     <string name="mark_all_as_read">علِّم الكلَّ مقروءًا</string>
     <string name="mark_as_unread">علِّمه غير مقروء</string>
     <string name="mark_as_unstar">علِّمه بغير نجمة</string>
-    <string name="tips_and_support_desc">حول، راعي، تراخيص المصدر المفتوح</string>
     <string name="welcome">مرحبًا</string>
     <string name="go_to">أذهب إلى</string>
     <string name="searching">يبحث …</string>
@@ -117,8 +116,6 @@
     <string name="interaction_desc">صفحة البدء، الإيماءات</string>
     <string name="tips_and_support">التلميحات والدعم</string>
     <string name="agree">وافِق</string>
-    <string name="wallpaper_colors">ألوان الخلفيَّة</string>
-    <string name="no_palettes">لا توجد لُوَح ألوان</string>
     <string name="appearance">المظهر</string>
     <string name="style">الأسلوب</string>
     <string name="dark_theme">السمة الداكنة</string>
@@ -230,7 +227,6 @@
     <string name="line_spacing">تباعد الأسطر</string>
     <string name="alignment">المحاذاة</string>
     <string name="delete_account_tips">هل أنت متأكِّد من أنَّك تريد حذف هذا الحساب؟</string>
-    <string name="help">المساعدة</string>
     <string name="on_start">عند البدء</string>
     <string name="article_date">وقت نشر المقالات</string>
     <string name="article_desc">أوصاف المقالات</string>
@@ -241,9 +237,7 @@
     <string name="check_failure">فشل التماس التحديثات</string>
     <string name="icons">الأيقونات</string>
     <string name="mark_as_read_seven_days">علِّمه مقروءًا منذ أكثر من ٧ أيَّام</string>
-    <string name="only_android_8.1_plus">فقط أندرويد +8.1</string>
     <string name="browse_tos_tips">تصفَّح <i><u>شروط الخدمة وسياسة الخصوصيَّة</u></i></string>
-    <string name="basic_colors">الألوان الأساس</string>
     <string name="reading_fonts">خطوط القراءة</string>
     <string name="initial_filter">التصفية المبدئية</string>
     <string name="tips_top_bar_tonal_elevation">يتوفَّر ارتفاع الطابَع للشريط العلويِّ عند التمرير فقط</string>

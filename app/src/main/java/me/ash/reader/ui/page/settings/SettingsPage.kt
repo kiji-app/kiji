@@ -14,7 +14,6 @@ import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material.icons.outlined.Palette
-import androidx.compose.material.icons.outlined.TipsAndUpdates
 import androidx.compose.material.icons.outlined.TouchApp
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material3.Icon
@@ -52,7 +51,6 @@ fun SettingsPage(
     navigateToInteraction: () -> Unit,
     navigateToLanguages: () -> Unit,
     navigateToTroubleshooting: () -> Unit,
-    navigateToTipsAndSupport: () -> Unit,
 ) {
     val context = LocalContext.current
     val newVersion = LocalNewVersionNumber.current
@@ -141,14 +139,6 @@ fun SettingsPage(
                         desc = stringResource(R.string.troubleshooting_desc),
                         icon = Icons.Outlined.BugReport,
                         onClick = navigateToTroubleshooting
-                    )
-                }
-                item {
-                    SelectableSettingGroupItem(
-                        title = stringResource(R.string.tips_and_support),
-                        desc = stringResource(R.string.tips_and_support_desc),
-                        icon = Icons.Outlined.TipsAndUpdates,
-                        onClick = navigateToTipsAndSupport
                     )
                 }
                 item {

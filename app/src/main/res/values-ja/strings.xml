@@ -37,10 +37,6 @@
     <string name="welcome">ようこそ</string>
     <string name="terms_of_service">利用規約</string>
     <string name="agree">同意する</string>
-    <string name="wallpaper_colors">壁紙の色</string>
-    <string name="no_palettes">パレットなし</string>
-    <string name="only_android_8.1_plus">Android 8.1 以降のみ</string>
-    <string name="basic_colors">基本の色</string>
     <string name="primary_color">メインカラー</string>
     <string name="style">スタイル</string>
     <string name="dark_theme">ダークテーマ</string>
@@ -55,7 +51,6 @@
     <string name="change_log">変更履歴</string>
     <string name="update">アップデート</string>
     <string name="download_failure">アップデートをダウンロードできませんでした</string>
-    <string name="help">ヘルプ</string>
     <string name="initial_page">スタートページ</string>
     <string name="preview_feed_name">Reddit</string>
     <string name="value">値を入力</string>
@@ -126,7 +121,6 @@
     <string name="color_and_style">色とスタイル</string>
     <string name="use_device_languages">デバイスの言語を使用する</string>
     <string name="tos_tips">Kiji の利用規約とプライバシーポリシーをお読みになり、同意される場合は、[同意する]をタップしてください。</string>
-    <string name="tips_and_support_desc">このアプリについて、スポンサー、オープンソースライセンス</string>
     <string name="browse_tos_tips"><i><u>利用規約とプライバシー ポリシー</u></i>をご覧ください</string>
     <string name="reading_fonts">フォント</string>
     <string name="flow_page">フローページ</string>

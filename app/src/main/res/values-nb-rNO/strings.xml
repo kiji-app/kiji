@@ -24,7 +24,6 @@
     <string name="other">Annet</string>
     <string name="sponsor">Sponsor</string>
     <string name="is_latest_version">Dette er siste versjon</string>
-    <string name="help">Hjelp</string>
     <string name="on_start">Ved oppstart</string>
     <string name="preview_feed_name">Reddit</string>
     <string name="value">verdi</string>
@@ -97,9 +96,6 @@
     <string name="all_allow_notification_toast">Alle merknader fra «%1$s»-gruppen tillates.</string>
     <string name="feeds">Informasjonskanaler</string>
     <string name="loading">Laster inn …</string>
-    <string name="wallpaper_colors">Bakgrunnsbildefarger</string>
-    <string name="no_palettes">Ingen paletter</string>
-    <string name="only_android_8.1_plus">Kun Android 8,1+</string>
     <string name="flow_page">Flytside</string>
     <string name="reading_page">Leseside</string>
     <string name="open_source_licenses">Frie lisenser</string>
@@ -126,7 +122,6 @@
     <string name="all_parse_full_content_tips">Full innholdsfortokning a alle artikler i «%1$s»-gruppen.</string>
     <string name="open_with">Åpne %1$s</string>
     <string name="accounts_desc">Lokal, FreshRSS</string>
-    <string name="basic_colors">Grunnfarger</string>
     <string name="primary_color_hint">Som #666666 eller 666666</string>
     <string name="amoled_dark_theme">Svart mørkt tema</string>
     <string name="basic_fonts">Grunnskrifter</string>
@@ -161,7 +156,6 @@
     <string name="unsubscribe_tips">Opphev abonnement på «%1$s» og slett alle arkiverte artikler i den.</string>
     <string name="group_option_tips">Følgende alternativer vil bli brukt for alle informasjonskanaler i gruppen.</string>
     <string name="mark_as_unstar">Opphev stjernemerking</string>
-    <string name="tips_and_support_desc">Om, frie lisenser</string>
     <string name="tos_tips">Les og samtykk til Kiji sine tjenestevilkår og personvernspraksis for å fortsette.</string>
     <string name="browse_tos_tips">Utforsk <i><u>tjenestevilkår og personvernspraksis</u></i></string>
     <string name="interaction_desc">Ved programstart, haptisk tilbakemelding</string>

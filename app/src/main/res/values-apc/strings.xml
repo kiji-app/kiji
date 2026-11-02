@@ -74,10 +74,6 @@
     <string name="tos_tips">پليز قرا شروط الخدمة و سياسة الخصوصية تبع \"ريد يو\" حتى تكفي.</string>
     <string name="terms_of_service">شروط الخدمة</string>
     <string name="agree">بقبل</string>
-    <string name="wallpaper_colors">ألوان الوال-پايپر</string>
-    <string name="no_palettes">مافي ألواح ألوان</string>
-    <string name="only_android_8.1_plus">بس لأندرويد 8.1+</string>
-    <string name="basic_colors">الألوان الأساسية</string>
     <string name="primary_color">اللون الرئيسي</string>
     <string name="primary_color_hint">متلًا #666666 أو 666666</string>
     <string name="style">الستيل</string>
@@ -101,7 +97,6 @@
     <string name="check_failure">فشل التنبيش ع تجديدات</string>
     <string name="download_failure">م قدرنا ننزل التجديدات</string>
     <string name="rate_limit">كميات الطلب محدودة</string>
-    <string name="help">مساعدة</string>
     <string name="on_start">عال تبليشة</string>
     <string name="initial_page">الصفحة الابتدائية</string>
     <string name="initial_filter">الفلتر الابتدائي</string>
@@ -216,7 +211,6 @@
     <string name="close">سكر</string>
     <string name="get_new_updates_desc">فيه الڤرجن الجديد %1$s</string>
     <string name="tips_and_support">تعليمات و دعم</string>
-    <string name="tips_and_support_desc">معلومات، و الترخيصات تبع المصادر المفتوحة</string>
     <string name="browse_tos_tips">تصفّح <i><u>شروط الخدمة و سياسة الخصوصيَّة</u></i></string>
     <string name="appearance">الشكل</string>
     <string name="upper_case">كاپيتل</string>

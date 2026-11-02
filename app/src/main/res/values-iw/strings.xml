@@ -42,9 +42,6 @@
     <string name="tips_and_support">עצות ותמיכה</string>
     <string name="terms_of_service">תנאי השירות</string>
     <string name="agree">מוסכם</string>
-    <string name="wallpaper_colors">צבעי טפט</string>
-    <string name="no_palettes">אין ערכות צבעים</string>
-    <string name="basic_colors">צבעים בסיסיים</string>
     <string name="primary_color">צבע עיקרי</string>
     <string name="appearance">מראה</string>
     <string name="style">סגנון</string>
@@ -57,7 +54,6 @@
     <string name="is_latest_version">זאת הגרסה העדכנית ביותר של היישומון</string>
     <string name="check_failure">איתור העדכונים נכשל</string>
     <string name="download_failure">לא ניתן להוריד עדכונים</string>
-    <string name="help">עזרה</string>
     <string name="on_start">בפתיחה</string>
     <string name="initial_filter">מסנן ברירת מחדל</string>
     <string name="value">ערך</string>
@@ -157,7 +153,6 @@
     <string name="accounts_desc">מקומי, שירותים, אירוח עצמי</string>
     <string name="rate_limit">קצב הבקשות מוגבל</string>
     <string name="article_images">תמונות הכתבה</string>
-    <string name="tips_and_support_desc">על אודות, מימון, רישיונות קוד פתוח</string>
     <string name="on">פעיל</string>
     <string name="amoled_dark_theme">ערכת עיצוב כהה שחורה</string>
     <string name="basic_fonts">גופנים בסיסיים</string>
@@ -261,7 +256,6 @@
     <string name="submit_bug_report">הגשת דיווח על תקלה ב־GitHub</string>
     <string name="only_link">קישור בלבד</string>
     <string name="export_as_protobuf_file">ייצוא כקובץ protobuf</string>
-    <string name="only_android_8.1_plus">Android 8.1+‎ בלבד</string>
     <string name="fill_selected_icon">מילוי סמל המסנן הנוכחי</string>
     <string name="filter_bar">סרגל סינון</string>
     <string name="fever_desc">השימוש הופסק. לא מומלץ.</string>

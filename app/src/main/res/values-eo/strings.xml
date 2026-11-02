@@ -70,16 +70,11 @@
     <string name="help_translate">Helpu traduki</string>
     <string name="use_device_languages">Uzi aparatlingvon</string>
     <string name="tips_and_support">Konsiloj ⳤ subteno</string>
-    <string name="tips_and_support_desc">Pri, malfermkodaj licencoj</string>
     <string name="welcome">Bonvenon</string>
     <string name="tos_tips">Bonvolu legi kaj konsenti pri servokondiĉoj kaj privateca politiko de Kiji por daŭrigi.</string>
     <string name="browse_tos_tips">Foliumi la <i><u>servokondiĉojn kaj privatecan politikon</u></i></string>
     <string name="terms_of_service">Servokondiĉoj</string>
     <string name="agree">Akcepti</string>
-    <string name="wallpaper_colors">Tapetaj koloroj</string>
-    <string name="no_palettes">Neniuj paletoj</string>
-    <string name="only_android_8.1_plus">Nur Android 8.1+</string>
-    <string name="basic_colors">Bazaj koloroj</string>
     <string name="primary_color">Ĉefa koloro</string>
     <string name="primary_color_hint">Ekzemple #666666 aŭ 666666</string>
     <string name="appearance">Aspekto</string>
@@ -103,7 +98,6 @@
     <string name="check_failure">Malsukcesis kontroli por ĝisdatigoj</string>
     <string name="download_failure">Ne eblis elŝuti ĝisdatigojn</string>
     <string name="rate_limit">La peta rapido estas limigita</string>
-    <string name="help">Helpo</string>
     <string name="on_start">Je la startigo</string>
     <string name="initial_page">Komenca paĝo</string>
     <string name="initial_filter">Komenca filtrilo</string>

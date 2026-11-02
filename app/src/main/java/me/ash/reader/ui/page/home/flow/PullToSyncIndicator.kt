@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
-import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -33,6 +32,7 @@ import androidx.compose.ui.util.fastCoerceAtMost
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import me.ash.reader.ui.component.base.WavyProgressIndicator
 import me.ash.reader.ui.page.home.reading.PullToLoadDefaults
 import me.ash.reader.ui.page.home.reading.PullToLoadState
 
@@ -152,17 +152,17 @@ fun BoxScope.PullToSyncIndicator(
                 LaunchedEffect(Unit) {
                     scale.animateTo(1.2f, animationSpec = scaleSpec)
                 }
-                LoadingIndicator(
+                WavyProgressIndicator(
                     color = MaterialTheme.colorScheme.onPrimaryFixedVariant,
                     modifier = Modifier
-                        .size(38.dp)
+                        .size(34.dp)
                         .scale(scale.value)
                 )
             } else {
-                LoadingIndicator(
+                WavyProgressIndicator(
                     progress = { fraction },
                     color = MaterialTheme.colorScheme.onPrimaryFixedVariant,
-                    modifier = Modifier.size(34.dp)
+                    modifier = Modifier.size(30.dp)
                 )
             }
         }

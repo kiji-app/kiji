@@ -120,7 +120,6 @@
     <string name="delete">அழி</string>
     <string name="delete_toast">%1$s அழிக்கப்பட்டது</string>
     <string name="all_parse_full_content_tips">\"%1$s\" குழுவின் அனைத்து கட்டுரைகளின் முழு உள்ளடக்கமும் அலகிடப்படுகிறது</string>
-    <string name="only_android_8.1_plus">Android 8.1+ இல் மட்டும்</string>
     <string name="all_deny_parse_full_content_toast">\"%1$s\" குழுவின் அனைத்து கட்டுரைகளின் முழு உள்ளடக்கமும் அலகிடப்படாது</string>
     <string name="group_option_tips">பின்வரும் விருப்பத்தேர்வுகள் இக்குழுவில்ருக்கும் அனைத்து ஊட்டங்களுக்கும் பொருந்தும்</string>
     <string name="open_source_licenses">விரி எழுவாய் உரிமங்கள்</string>
@@ -132,8 +131,6 @@
     <string name="accounts_desc">உற்றிடம், FreshRSS</string>
     <string name="mark_as_read_button_position">முடிந்தால் \"வாசித்தவை என குறியிடு\" பொத்தான்</string>
     <string name="color_and_style">நிறம் &amp; பாணி</string>
-    <string name="tips_and_support_desc">இது பற்றி, விரி எழுவாய் உரிமங்கள்</string>
-    <string name="wallpaper_colors">முகப்போவிய நிறங்கள்</string>
     <string name="rate_limit">கோரிக்கை விகிதம் வரையறுக்கப்பட்டது</string>
     <string name="icons">வடிவுருக்கள்</string>
     <string name="icons_and_labels">வடிவுருக்கள் மற்றும் பொறிப்புகள்</string>
@@ -221,8 +218,6 @@
     <string name="languages">மொழிகள்</string>
     <string name="help_translate">மொழிபெயர்க்க உதவு</string>
     <string name="tips_and_support">கொசுறு &amp; ஆதரவு</string>
-    <string name="no_palettes">தட்டுக்கள் இல்லை</string>
-    <string name="basic_colors">அடிப்படை நிறங்கள்</string>
     <string name="primary_color">முதன்மை நிறம்</string>
     <string name="appearance">தோற்றம்</string>
     <string name="style">பாணி</string>
@@ -245,7 +240,6 @@
     <string name="update_link">https://api.github.com/repos/kiji-app/kiji/releases/latest</string>
     <string name="check_failure">புதுப்பிக்கும் சோதனை செயலிழந்தது</string>
     <string name="download_failure">புதுப்பித்தல்களை பதிவிறக்கமுடியவில்லை</string>
-    <string name="help">உதவி</string>
     <string name="on_start">துவக்கத்தில்</string>
     <string name="initial_page">முதன்மைப் பக்கம்</string>
     <string name="initial_filter">முதன்மை வடிகட்டி</string>

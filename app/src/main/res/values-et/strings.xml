@@ -79,7 +79,6 @@
     <string name="help_translate">Aita tõlkida</string>
     <string name="use_device_languages">Kasuta nutiseadme keelt</string>
     <string name="tips_and_support">Nõuanded ja kasutajatugi</string>
-    <string name="wallpaper_colors">Taustapildi värvid</string>
     <string name="open_source_licenses">Avatud lähtekoodiga tarkvara litsentsid</string>
     <string name="change_log">Muudatuste logi</string>
     <string name="update">Uuenda</string>
@@ -89,7 +88,6 @@
     <string name="check_failure">Uuenduste kontrollimine ei õnnestunud</string>
     <string name="download_failure">Uuenduste allalaadimine ei õnnestunud</string>
     <string name="rate_limit">Päringutel kehtib mahupiirang</string>
-    <string name="help">Abiteave</string>
     <string name="on_start">Rakenduse käivitamisel</string>
     <string name="font_size">Kirjatüübi suurus</string>
     <string name="letter_spacing">Tähevahed</string>
@@ -128,12 +126,8 @@
     <string name="interaction">Liidese kasutus</string>
     <string name="coming_soon">Avaldatakse varsti</string>
     <string name="interaction_desc">Avaleht, viipamine</string>
-    <string name="tips_and_support_desc">Rakenduse teave, sponsorlus, avatud lähtekoodi litsentsid</string>
     <string name="welcome">Tere tulemast</string>
     <string name="agree">Nõustun</string>
-    <string name="no_palettes">Värvipalette pole</string>
-    <string name="only_android_8.1_plus">Vaid Android 8.1+ jaoks</string>
-    <string name="basic_colors">Põhivärvid</string>
     <string name="primary_color">Esmane värv</string>
     <string name="primary_color_hint">Näiteks #666666 või 666666</string>
     <string name="appearance">Välimus</string>

@@ -37,7 +37,7 @@ sealed class FeedsFilterBarStylePreference(val value: Int) : Preference() {
 
     companion object {
 
-        val default = Icon
+        val default = IconLabel
         val values = listOf(Icon, IconLabel, IconLabelOnlySelected)
 
         fun fromPreferences(preferences: Preferences): FeedsFilterBarStylePreference =

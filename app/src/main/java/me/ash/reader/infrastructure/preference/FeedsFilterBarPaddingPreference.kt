@@ -15,7 +15,7 @@ val LocalFeedsFilterBarPadding =
 
 object FeedsFilterBarPaddingPreference {
 
-    const val default = 60
+    const val default = 0
 
     fun put(context: Context, scope: CoroutineScope, value: Int) {
         scope.launch {

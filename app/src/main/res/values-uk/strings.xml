@@ -75,7 +75,6 @@
     <string name="mark_as_read_one_day">Позначити як прочитане більше 1 дня</string>
     <string name="mark_as_read_seven_days">Позначити як прочитане більше 7 днів тому</string>
     <string name="welcome">Ласкаво Просимо</string>
-    <string name="tips_and_support_desc">Про застосунок, спонсор, ліцензії з відкритим кодом</string>
     <string name="tos_tips">Будь ласка, прочитайте та погодьтеся з умовами надання послуг та політикою конфіденційності Kiji, щоб продовжити.</string>
     <string name="open_with">Відкрити %1$s</string>
     <string name="mark_as_read">Позначити як прочитане</string>
@@ -134,10 +133,6 @@
     <string name="browse_tos_tips">Перегляньте <i><u>умови надання послуг та політику конфіденційності</u></i></string>
     <string name="terms_of_service">Умови надання послуг</string>
     <string name="agree">Згоден</string>
-    <string name="wallpaper_colors">Колір шпалер</string>
-    <string name="no_palettes">Без палітри</string>
-    <string name="only_android_8.1_plus">Тільки Android 8.1+</string>
-    <string name="basic_colors">Основні кольори</string>
     <string name="primary_color">Основний колір</string>
     <string name="primary_color_hint">Наприклад, #666666 або 666666</string>
     <string name="appearance">Зовнішній вигляд</string>
@@ -165,7 +160,6 @@
     <string name="check_failure">Не вдалося перевірити наявність оновлень</string>
     <string name="download_failure">Не вдалося завантажити оновлення</string>
     <string name="rate_limit">Кількість запитів обмежена</string>
-    <string name="help">Допомога</string>
     <string name="on_start">Під час запуску</string>
     <string name="initial_page">Стартова сторінка</string>
     <string name="initial_filter">Типовий фільтр</string>

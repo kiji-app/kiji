@@ -27,6 +27,7 @@ import kotlinx.coroutines.delay
 import me.ash.reader.ui.motion.materialSharedAxisXIn
 import me.ash.reader.ui.motion.materialSharedAxisXOut
 import me.ash.reader.ui.page.adaptive.ArticleData
+import me.ash.reader.ui.page.about.AboutPage
 import me.ash.reader.ui.page.adaptive.ArticleListReaderPage
 import me.ash.reader.ui.page.adaptive.ArticleListReaderViewModel
 import me.ash.reader.ui.page.home.feeds.FeedsPage
@@ -50,7 +51,6 @@ import me.ash.reader.ui.page.settings.color.reading.ReadingVideoPage
 import me.ash.reader.ui.page.settings.interaction.InteractionPage
 import me.ash.reader.ui.page.settings.languages.LanguagesPage
 import me.ash.reader.ui.page.settings.tips.LicenseListPage
-import me.ash.reader.ui.page.settings.tips.TipsAndSupportPage
 import me.ash.reader.ui.page.settings.troubleshooting.TroubleshootingPage
 import me.ash.reader.ui.page.startup.StartupPage
 
@@ -116,6 +116,7 @@ fun AppEntry(backStack: NavBackStack<NavKey>) {
                                 sharedTransitionScope = this@SharedTransitionLayout,
                                 animatedVisibilityScope = LocalNavAnimatedContentScope.current,
                                 navigateToSettings = { backStack.add(Route.Settings) },
+                                navigateToAbout = { backStack.add(Route.About) },
                                 navigationToFlow = { backStack.add(Route.Reading(null)) },
                                 navigateToAccountList = { backStack.add(Route.Accounts) },
                                 navigateToAccountDetail = {
@@ -187,7 +188,6 @@ fun AppEntry(backStack: NavBackStack<NavKey>) {
                                 navigateToTroubleshooting = {
                                     backStack.add(Route.Troubleshooting)
                                 },
-                                navigateToTipsAndSupport = { backStack.add(Route.TipsAndSupport) },
                             )
                         }
                     Route.Accounts ->
@@ -265,9 +265,9 @@ fun AppEntry(backStack: NavBackStack<NavKey>) {
                     Route.Interaction -> NavEntry(key) { InteractionPage(onBack = onBack) }
                     Route.Languages -> NavEntry(key) { LanguagesPage(onBack = onBack) }
                     Route.Troubleshooting -> NavEntry(key) { TroubleshootingPage(onBack = onBack) }
-                    Route.TipsAndSupport ->
+                    Route.About ->
                         NavEntry(key) {
-                            TipsAndSupportPage(
+                            AboutPage(
                                 onBack = onBack,
                                 navigateToLicenseList = { backStack.add(Route.LicenseList) },
                             )

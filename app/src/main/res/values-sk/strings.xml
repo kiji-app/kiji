@@ -73,7 +73,6 @@
     <string name="languages">Jazyky</string>
     <string name="help_translate">Pomôžte s prekladom</string>
     <string name="use_device_languages">Použiť jazyk zariadenia</string>
-    <string name="tips_and_support_desc">O aplikácii, sponzor, open source licencie</string>
     <string name="welcome">Vitajte</string>
     <string name="browse_tos_tips">Pozrite si <i><u>Zmluvné podmienky a Zásady ochrany osobných údajov</u></i></string>
     <string name="terms_of_service">Zmluvné podmienky</string>
@@ -110,10 +109,6 @@
     <string name="tips_and_support">Tipy a podpora</string>
     <string name="tos_tips">Ak chcete pokračovať, prečítajte si a vyjadrite súhlas s Podmienkami používania Kiji a Zásadami ochrany osobných údajov.</string>
     <string name="agree">Súhlasím</string>
-    <string name="wallpaper_colors">Farby tapety</string>
-    <string name="no_palettes">Žiadne palety</string>
-    <string name="only_android_8.1_plus">Len Android 8.1+</string>
-    <string name="basic_colors">Základné farby</string>
     <string name="primary_color">Primárna farba</string>
     <string name="primary_color_hint">Napríklad #666666 alebo 666666</string>
     <string name="appearance">Vzhľad</string>
@@ -169,7 +164,6 @@
     <string name="flow_page">Stránka toku</string>
     <string name="check_failure">Nepodarilo sa skontrolovať aktualizácie</string>
     <string name="rate_limit">Počet požiadaviek je obmedzený</string>
-    <string name="help">Pomoc</string>
     <string name="on_start">Pri spustení</string>
     <string name="value">hodnota</string>
     <string name="horizontal_padding">Vodorovné odsadenie</string>
