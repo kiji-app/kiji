@@ -11,6 +11,21 @@ jobs:
                   distribution: temurin
                   java-version: 17
 
+            - name: Prepare release signing
+              env:
+                  SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+                  KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+              if: env.SIGNING_KEY != ''
+              run: |
+                  mkdir -p signature
+                  echo "$SIGNING_KEY" | base64 -d > signature/kiji-release.jks
+                  {
+                    echo "storeFile=$GITHUB_WORKSPACE/signature/kiji-release.jks"
+                    echo "storePassword=$KEY_STORE_PASSWORD"
+                    echo "keyAlias=kiji"
+                    echo "keyPassword=$KEY_STORE_PASSWORD"
+                  } > signature/keystore_release.properties
+
             - uses: gradle/gradle-build-action@v2.4.2
             - run: ./gradlew assembleGithubRelease
 

@@ -16,14 +16,10 @@ plugins {
 
 val keyProps = Properties()
 val releaseKeyPropsFile: File = rootProject.file("signature/keystore_release.properties")
-val debugKeyPropsFile: File = rootProject.file("signature/keystore.properties")
-
 
 if (releaseKeyPropsFile.exists()) {
     println("Loading keystore properties from ${releaseKeyPropsFile.absolutePath}")
     keyProps.load(FileInputStream(releaseKeyPropsFile))
-} else if (debugKeyPropsFile.exists()) {
-    keyProps.load(FileInputStream(debugKeyPropsFile))
 }
 
 android {
@@ -80,9 +76,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
-            signingConfig = signingConfigs.getByName("release")
+            if (releaseKeyPropsFile.exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
-        all { signingConfig = signingConfigs.getByName("release") }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
