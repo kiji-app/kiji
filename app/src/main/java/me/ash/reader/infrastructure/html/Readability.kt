@@ -14,7 +14,7 @@ object Readability {
     fun parseToText(htmlContent: String?, uri: String?): String {
         htmlContent ?: return ""
         return try {
-            Readability4JExtended(uri, htmlContent).parse().textContent?.trim() ?: ""
+            Readability4JExtended(uri, applySiteRules(htmlContent, uri)).parse().textContent?.trim() ?: ""
         } catch (e: Exception) {
             Log.e("RLog", "Readability.parseToText '$uri' is error: ", e)
             ""
@@ -23,7 +23,7 @@ object Readability {
 
     fun parseToElement(htmlContent: String?, uri: String?): Element? {
         htmlContent ?: return null
-        return Readability4JExtended(uri, htmlContent).parse().articleContent
+        return Readability4JExtended(uri, applySiteRules(htmlContent, uri)).parse().articleContent
     }
 
     private fun Readability4JExtended(uri: String?, html: String): Readability4JExtended {

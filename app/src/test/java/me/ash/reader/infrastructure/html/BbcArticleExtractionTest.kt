@@ -34,4 +34,11 @@ class BbcArticleExtractionTest {
         assertFalse(text.contains("Menu BBC Navegação"))
         assertFalse(text.contains("Rodapé BBC"))
     }
+
+    @Test
+    fun dropsBylineAndReadTime() {
+        val text = extract().text()
+        assertFalse(text.contains("Author,"))
+        assertFalse(text.contains("Tempo de leitura"))
+    }
 }
