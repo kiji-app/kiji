@@ -43,6 +43,7 @@ import me.ash.reader.infrastructure.android.AndroidImageDownloader
 import me.ash.reader.infrastructure.android.TextToSpeechManager
 import me.ash.reader.infrastructure.di.ApplicationScope
 import me.ash.reader.infrastructure.di.IODispatcher
+import me.ash.reader.infrastructure.html.splitPlainTextParagraphs
 import me.ash.reader.infrastructure.preference.PullToLoadNextFeedPreference
 import me.ash.reader.infrastructure.preference.SettingsProvider
 import me.ash.reader.infrastructure.rss.ReaderCacheHelper
@@ -331,7 +332,7 @@ constructor(
                     renderFullContent()
                     ReaderState.Loading
                 }
-            } else ReaderState.Description(articleWithFeed.article.rawDescription)
+            } else ReaderState.Description(articleWithFeed.article.rawDescription.splitPlainTextParagraphs())
 
         return copy(content = contentState)
     }
@@ -339,7 +340,9 @@ constructor(
     fun renderDescriptionContent() {
         _readerState.update {
             it.copy(
-                content = ReaderState.Description(content = currentArticle?.rawDescription ?: "")
+                content = ReaderState.Description(
+                    content = currentArticle?.rawDescription?.splitPlainTextParagraphs() ?: ""
+                )
             )
         }
     }
