@@ -43,6 +43,7 @@ import me.ash.reader.infrastructure.android.AndroidImageDownloader
 import me.ash.reader.infrastructure.android.TextToSpeechManager
 import me.ash.reader.infrastructure.di.ApplicationScope
 import me.ash.reader.infrastructure.di.IODispatcher
+import me.ash.reader.infrastructure.html.hasArticleBody
 import me.ash.reader.infrastructure.html.isTeaser
 import me.ash.reader.infrastructure.html.splitPlainTextParagraphs
 import me.ash.reader.infrastructure.preference.PullToLoadNextFeedPreference
@@ -336,8 +337,13 @@ constructor(
             } else if (articleWithFeed.article.rawDescription.isTeaser()) {
                 val fullContent =
                     readerCacheHelper.readFullContent(articleWithFeed.article.id).getOrNull()
-                if (fullContent != null) ReaderState.FullContent(fullContent)
-                else {
+                if (fullContent != null) {
+                    if (fullContent.hasArticleBody()) ReaderState.FullContent(fullContent)
+                    else
+                        ReaderState.Description(
+                            articleWithFeed.article.rawDescription.splitPlainTextParagraphs()
+                        )
+                } else {
                     renderFullContent(fallbackToDescription = true)
                     ReaderState.Loading
                 }
@@ -362,9 +368,12 @@ constructor(
                 readerCacheHelper
                     .readOrFetchFullContent(currentArticle!!)
                     .onSuccess { content ->
-                        _readerState.update {
-                            it.copy(content = ReaderState.FullContent(content = content))
-                        }
+                        if (fallbackToDescription && !content.hasArticleBody())
+                            renderDescriptionContent()
+                        else
+                            _readerState.update {
+                                it.copy(content = ReaderState.FullContent(content = content))
+                            }
                     }
                     .onFailure { th ->
                         if (fallbackToDescription) renderDescriptionContent()
