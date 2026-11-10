@@ -158,6 +158,7 @@ dependencies {
     implementation(libs.room.common)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+    androidTestImplementation(libs.room.testing)
     implementation(libs.paging.common.ktx)
     implementation(libs.paging.runtime.ktx)
     implementation(libs.paging.compose)
