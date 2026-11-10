@@ -35,7 +35,9 @@ import okio.IOException
 import org.jsoup.Jsoup
 
 val enclosureRegex = """<enclosure\s+url="([^"]+)"\s+type=".*"\s*/>""".toRegex()
-val imgRegex = """img.*?src=(["'])((?!data).*?)\1""".toRegex(RegexOption.DOT_MATCHES_ALL)
+private const val MAX_FEED_CANDIDATES = 8
+
+val imgRegex ="""img.*?src=(["'])((?!data).*?)\1""".toRegex(RegexOption.DOT_MATCHES_ALL)
 
 /** Some operations on RSS. */
 class RssHelper
@@ -61,22 +63,10 @@ constructor(
 
             val parsedDirectFeed = runCatching { parseFeed(directBody, directHttpContentType) }.getOrNull()
 
-            val resolvedFeedLink =
-                if (parsedDirectFeed != null) feedLink
-                else discoverFeedLink(feedLink, directBody)
+            val (feed, resolvedFeedLink) =
+                if (parsedDirectFeed != null) parsedDirectFeed to feedLink
+                else discoverFeed(feedLink, directBody)
                     ?: throw IOException("Unable to detect RSS feed URL")
-
-
-            val feed = parsedDirectFeed ?: run {
-                val discoveredResponse = response(okHttpClient, resolvedFeedLink)
-                if (!discoveredResponse.commonIsSuccessful) {
-                    throw IOException(discoveredResponse.message)
-                }
-                parseFeed(
-                    discoveredResponse.body.bytes(),
-                    toHttpContentType(discoveredResponse.header("Content-Type")),
-                )
-            }
 
             feed.also {
                 it.icon = SyndImageImpl()
@@ -98,18 +88,23 @@ constructor(
             SyndFeedInput().build(XmlReader(inputStream, httpContentType))
         }
 
-    private fun discoverFeedLink(pageUrl: String, body: ByteArray): String? {
-        val document = Jsoup.parse(String(body, Charsets.UTF_8), pageUrl)
-        val links = document.select("head link[rel~=(?i)alternate][href]")
-        val preferred =
-            links.firstOrNull {
-                val type = it.attr("type").lowercase(Locale.ROOT)
-                type == "application/rss+xml" ||
-                    type == "application/atom+xml" ||
-                    type == "application/rdf+xml"
-            }
-        val fallback = links.firstOrNull()
-        return (preferred ?: fallback)?.absUrl("href")?.takeIf { it.isNotBlank() }
+    private suspend fun discoverFeed(pageUrl: String, body: ByteArray): Pair<SyndFeed, String>? {
+        val candidates =
+            candidateFeedLinks(pageUrl, String(body, Charsets.UTF_8)).take(MAX_FEED_CANDIDATES)
+        for (candidate in candidates) {
+            val feed =
+                runCatching {
+                        val candidateResponse = response(okHttpClient, candidate)
+                        if (!candidateResponse.commonIsSuccessful) return@runCatching null
+                        parseFeed(
+                            candidateResponse.body.bytes(),
+                            toHttpContentType(candidateResponse.header("Content-Type")),
+                        )
+                    }
+                    .getOrNull()
+            if (feed != null) return feed to candidate
+        }
+        return null
     }
 
     @Throws(Exception::class)
