@@ -43,6 +43,7 @@ import me.ash.reader.infrastructure.android.AndroidImageDownloader
 import me.ash.reader.infrastructure.android.TextToSpeechManager
 import me.ash.reader.infrastructure.di.ApplicationScope
 import me.ash.reader.infrastructure.di.IODispatcher
+import me.ash.reader.infrastructure.html.isTeaser
 import me.ash.reader.infrastructure.html.splitPlainTextParagraphs
 import me.ash.reader.infrastructure.preference.PullToLoadNextFeedPreference
 import me.ash.reader.infrastructure.preference.SettingsProvider
@@ -332,6 +333,14 @@ constructor(
                     renderFullContent()
                     ReaderState.Loading
                 }
+            } else if (articleWithFeed.article.rawDescription.isTeaser()) {
+                val fullContent =
+                    readerCacheHelper.readFullContent(articleWithFeed.article.id).getOrNull()
+                if (fullContent != null) ReaderState.FullContent(fullContent)
+                else {
+                    renderFullContent(fallbackToDescription = true)
+                    ReaderState.Loading
+                }
             } else ReaderState.Description(articleWithFeed.article.rawDescription.splitPlainTextParagraphs())
 
         return copy(content = contentState)
@@ -347,7 +356,7 @@ constructor(
         }
     }
 
-    fun renderFullContent() {
+    fun renderFullContent(fallbackToDescription: Boolean = false) {
         val fetchJob =
             viewModelScope.launch {
                 readerCacheHelper
@@ -358,9 +367,11 @@ constructor(
                         }
                     }
                     .onFailure { th ->
-                        _readerState.update {
-                            it.copy(content = ReaderState.Error(th.message.toString()))
-                        }
+                        if (fallbackToDescription) renderDescriptionContent()
+                        else
+                            _readerState.update {
+                                it.copy(content = ReaderState.Error(th.message.toString()))
+                            }
                     }
             }
         viewModelScope.launch {
