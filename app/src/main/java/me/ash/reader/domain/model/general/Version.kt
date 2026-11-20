@@ -21,7 +21,7 @@ class Version(numbers: List<String>) {
     }
 
     constructor() : this(listOf())
-    constructor(string: String?) : this(string?.split(".") ?: listOf())
+    constructor(string: String?) : this(string?.removePrefix("v")?.split(".") ?: listOf())
 
     override fun toString() = "$major.$minor.$point"
 
