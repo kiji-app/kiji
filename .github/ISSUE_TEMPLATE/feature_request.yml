@@ -1,51 +1,59 @@
-name: "Feature Request"
-description: Suggest a new feature for the app
-labels: [ enhancement, untriaged ]
+name: 🌟 Feature request
+description: Suggest a feature to improve Kiji
+labels: [enhancement]
 body:
 
-  - type: checkboxes
-    id: checklist
+  - type: markdown
     attributes:
-      label: Checklist
-      options:
-        - label: I've already searched in [existing issues](https://github.com/ReadYouApp/ReadYou/issues?q=is%3Aissue+) and haven't found a similar feature request.
-          required: true
+      value: |
+        Kiji is focused on reading quality: clean article text, with paragraphs and images in place. Feature requests are welcome but may be declined or take a while, since this is maintained in personal time.
 
-
-  - type: dropdown
-    id: types
+  - type: textarea
+    id: feature-description
     attributes:
-      label: Which category best fits this feature request?
-      options:
-        - Feed Sync & Management
-        - User Interface
-        - Integration with other apps
-        - Others
+      label: Describe your suggested feature
+      description: How can Kiji be improved?
+      placeholder: |
+        Example:
+          "It should work like this..."
     validations:
       required: true
 
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other details
+      placeholder: |
+        Additional details and attachments. If it helps, add links to a feed or article where this feature would be useful.
 
-  - type: textarea
-    id: description_1
+  - type: checkboxes
+    id: acknowledgements
     attributes:
-      label: Is your feature request related to a problem? Please describe.
-      description:
-      placeholder: A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-    validations:
-      required: false
-  - type: textarea
-    id: description_2
+      label: Acknowledgements
+      description: Read this carefully, we will close and ignore your issue if you skimmed through this.
+      options:
+        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
+          required: true
+        - label: I have written a short but informative title.
+          required: true
+        - label: I have updated the app to version **[the latest release](https://github.com/kiji-app/kiji/releases/latest)**.
+          required: true
+        - label: I have checked through the app settings for my feature.
+          required: true
+        - label: I will fill out all of the requested information in this form.
+          required: true
+
+  - type: "textarea"
+    id: "prioritisation"
     attributes:
-      label: Describe the solution you'd like
-      description:
-      placeholder: A clear and concise description of what you want to do in the app.
-    validations:
-      required: false
-  - type: textarea
-    id: description_3
-    attributes:
-      label: Related links
-      description:
-      placeholder: Please provide links to the feed or article where this feature might be beneficial.
-    validations:
-      required: false
+      label: "Is this issue important to you?"
+      description: |
+        **Please do not modify this text area!**
+
+        This template let users to vote with a :+1: reaction if they find it important.
+        This is not a guarantee that highly-requested issues will be fixed first, but it helps us to figure out what's important to users. Please react on other users' issues if you find them important.
+      value: |
+        Add a :+1: [reaction] to [issues you find important].
+
+        [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
+        [issues you find important]: https://github.com/kiji-app/kiji/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc
